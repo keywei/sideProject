@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0px;
+        }
+        .logo span{
+            font-size: 2em;
+            font-weight:900;
+        }
+        .logo span:nth-of-type(2){
+            color: rgb(245, 232, 60);
+        }
+        .nav{
+            width:100%;
+            background-color: rgb(21, 109, 75);
+            text-align-last: justify;
+            line-height: 3em;
+            }
+        ul,li{
+            padding: 0;
+            margin: 0;
+            display: inline-block;
+        }
+        .login{
+            margin-right: 1em;
+            background-color: rgb(255, 187, 0);
+            line-height: 20px;
+            border-radius:2px;
+            padding: 1px 5px;
+        }
+        
+        .nav a{
+            text-decoration: none;
+            color: white;
+            font-size: 0.5em;
+         }
+         .login a{
+            color: black;
+
+        }
+         .navr li{
+            margin-left: 1em;
+        }
+        .category{
+            padding:2px 3px;
+            background-color: rgba(0, 0, 0, 0.322);
+            border-bottom: 1px rgb(187, 124, 6) solid;
+        }
+        .category p {
+            padding: 6px 0px 0px;
+            font-size: 1pt;
+            /* color: rgba(155, 153, 153, 0.842); */
+            color: white;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+        .category li {
+            padding: 5px 5px;
+            vertical-align: middle;
+            text-align: center;
+            opacity: 0.3;
+            -webkit-filter:grayscale(1);
+
+            /* -webkit-filter:brightness(0.1) */
+            
+        }
+        .category li:hover{            
+            -webkit-filter:grayscale(0);
+            text-decoration: none;
+            opacity: 1;
+        }
+        
+        .category li a img{
+            width: 30px;
+            height: 30px;
+        }
+        .table{
+            border-collapse: collapse;
+            width: 100%;
+            color: rgb(179, 173, 173);
+            text-align: center;
+            font-size: 1pt;
+         }
+         
+        .table tr:nth-of-type(1){
+            text-align: right;
+            background-color: rgba(48, 46, 46, 0.445);
+            height: 40px;
+        }
+        
+        .table tr th:nth-of-type(1){
+            text-align: left;
+            font-size: large;
+            padding-left: 20px;
+            color: white;
+        }
+        .subject{
+            background-color: rgba(209, 203, 203, 0.123);
+        }
+        .subject td:nth-of-type(1){
+            text-align: left;
+            padding-left: 20px;
+        }
+        
+        .content td div{
+            text-align: left;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .border div{
+            border-right:1px solid rgb(85, 82, 82);
+            line-height: 20px;
+            text-align: right;
+        }
+        td span:nth-of-type(2),
+        td:last-child span:only-child,
+        td:nth-last-of-type(2) span:only-child{
+            color: rgb(255, 187, 0);
+        }
+        .table td:last-child{
+            width: 13%;
+            text-align: center;
+        }
+        .td1 p{
+            padding-left: 20px;
+            text-align:left;
+             }
+        .td1{
+                 width: 10%;
+             }
+        .img{
+        padding-top: 8px;     
+        padding-left: 30px;
+        padding-right: auto;
+        line-height: 30px;            
+        border-left:1px solid rgb(85, 82, 82);
+        }
+        .divflex{
+            display: flex;
+            height: 1000px;
+        }
+        .divflex1{
+            overflow-y: scroll;/*桌機垂直捲動*/
+            flex: 2;
+            background-color: rgba(12, 12, 12, 0.76);
+
+
+        }
+        .divflex2{
+            background-color: rgba(0, 0, 0, 0.822);
+            flex: 1;
+            text-align: center;
+            color: white;
+            font-size: 1pt;
+        }
+        .divflex2 span{
+            color: rgb(247, 223, 12);
+            font-size: 15pt;
+        }
+        .borderw,.borderr{
+            display: inline-block;
+            width: 20px;
+            border-bottom:3px solid white;
+            margin-bottom: -5px;
+            }
+        .borderr{       
+            border-bottom:3px solid red;
+            }
+        .borderg{
+            display: inline-block;
+            width: 30px;
+            border-top:1px solid green;
+            }
+        .borderlw{
+            border-left: 5px white solid;
+        }
+        .borderlr{
+            border-left: 5px red solid;
+        }
+        .borderbw{
+            border-bottom: 2px white solid;
+        }
+        .borderbr{
+            border-bottom: 2px red solid;
+        }
+        .bordert{
+            border-top: 1px solid rgb(85, 82, 82);
+        }
+        .borderb{
+            border-bottom: 1px solid rgb(85, 82, 82);;
+
+        }
+        .bordernone{
+            border-bottom:1px solid rgba(80, 74, 74, 0.096);
+        }
+        .hrg{
+        padding-right: 14px;
+        margin-top: -13px;            
+        }
+        .hrwr{
+        padding-right: 15px;        
+        }
+        .fieldimg{
+            border-top: 1px solid rgb(85, 82, 82);
+            border-bottom: 1px solid rgb(85, 82, 82);
+            padding-top: 10px;
+            padding-bottom: 15px;
+            margin-right: 15px;
+        }
+        .divflex2{
+        padding-top: 10px;        
+        }
+        .divflex2 table{
+        margin: 0 auto;
+        table-layout: fixed;
+        width: 80%;
+        color: gray;        
+        }
+        .table1 tr td:nth-of-type(1){
+            text-align: left;
+            height: 1px;
+
+        }
+        .fsbw{
+        font-weight: 900;        
+        }
+        .fsbr{
+        font-weight: 900;
+        color: red;        
+        }
+        .table2 tr td p:nth-of-type(1){
+            color: white;
+        }
+        .textw{
+            color: white;
+        }
+        .texty{
+            color: rgba(255, 238, 0, 0.74);
+        }
+
+        
+        
+        
+        
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <ul class="navl">
+        <li class="logo"><a href=""><span>bet</span><span>365</span></a></li>
+        </ul>
+        <ul class="navm">
+            <li><a href="">Sports</a></li>
+            <li><a href="">In-Play</a></li>
+        </ul>
+        <ul class="navr">
+            <li class="search"><img src="images/kindpng_790382.png" alt="" width="15px" height="15px"></li>
+            <li><a href="">Join</a></li>
+            <li class="login"><a href="">Log in</a></li>
+        </ul>
+</div>
+<div class="divflex">
+    <div class="divflex1">
+        <div class="category">
+            <ul>
+                <li><a href=""><img src="images/sport.svg" alt="" width=""><p>Soccer</p></a></li>
+                <li><a href=""><img src="images/racquet+sport+squash+tennis+tC3AAnis+icon-1320086005765961363_0.svg" alt="" width=""><p>Tennis</p></a></li>
+                <li><a href=""><img src="images/baseball.svg" alt="" width=""><p>Baseball</p></a></li>
+                <li><a href=""><img src="images/baquete+basketball+buried+hoop+orange+sport+icon-1320086004594029924_0.svg" alt="" width=""><p>Esports</p></a></li>
+                <li><a href=""><img src="images/esports.svg" alt="" width=""><p>Esports</p></a></li>
+                <li><a href=""><img src="images/dog.svg" alt="" width=""><p>Greyhounds</p></a></li>
+                <li><a href=""><img src="images/zoo.svg" alt="" width=""><p>Horse Racing</p></a></li>
+                <li><a href=""><img src="images/hockey.svg" alt="" width=""><p>Ice Hockey</p></a></li>
+                <li><a href=""><img src="images/table-tennis.svg" alt="" width=""><p>Table Tennis</p></a></li>
+                <li><a href=""><img src="images/volleyball.svg" alt="" width=""><p>Volleyball</p></a></li>
+                <li><a href=""><img src="images/streaming.svg" alt="" width=""><p>Streaming</p></a></li>
+                <li><a href=""><img src="images/calendar.svg" alt="" width=""><p>Schedule</p></a></li>
+                
+            </ul>
+       </div>
+        <div>
+            <table class="table">
+                <tr>
+                    <th colspan="6">Basketball</th>
+                    <th colspan="2"><span>Game Lines</span> <span>will There Be Overtime?</span></th>
+                </tr>
+                <tr class="subject">
+                    <td colspan="4">3x3 Liga Pro</td>
+                    
+                    <td>Spread</td>
+                    <td>Total</td>
+                    <td>Money Line</td>
+                    <td></td>
+                </tr>
+                <tr class="content">
+                    <td class="td1" rowspan="2">
+                        <p>07:01</p>
+                        <p>3&gt;</p>
+                    </td>
+                    <td colspan="2" rowspan="2">
+                        <div>
+                            <p>Dinamo-pro 3*3</p>
+                            <p>Dinamo-pro 3*3</p>
+                        </div>
+                        <td class="border" rowspan="2">
+                            <div>
+                                <p>4</p>
+                                <p>5</p>
+                            </div>
+                            
+                        </td>
+                    </td>
+                    <td>
+                        <span>+1.5</span>
+                        <span>1.52</span>
+                    </td>
+                    <td>
+                        <span>O 35.5</span>
+                        <span>1.83</span>
+                    </td>
+                    <td>
+                        <span>1.83</span>
+                    </td>
+                    <td rowspan="2">
+                        <div class="img"><img src="images/streaming.svg" alt="" width="30px"height="30px"></div>
+                    </td>
+                </tr>
+                <tr>
+
+                    <td>
+                        <span>-1.5</span>
+                        <span>2.40</span>
+                    </td>
+                    <td>
+                        <span>U 35.5</span>
+                        <span>1.83</span>
+                    </td>
+                    <td>
+                        <span>1.83</span>
+                    </td>
+                </tr>
+                <tr class="subject">
+                    <td colspan="4">Ebasketball Live Arena -4x5mins</td>
+                    
+                    <td>Spread</td>
+                    <td>Total</td>
+                    <td>Money Line</td>
+                    <td></td>
+
+                </tr>
+                <tr class="content">
+                    <td class="td1" rowspan="2">
+                        <p>Q3 03:56</p>
+                        <p>3&gt;</p>
+                    </td>
+                    <td colspan="2" rowspan="2">
+                        <div>
+                            <p>MIN Timberwolves (Siegfried) Esports</p>
+                            <p>ORL Magic (BoBBY) Esports</p>
+                        </div>
+                        
+                    </td>
+                    <td class="border" rowspan="2">
+                        <div>
+                            <p>28</p>
+                            <p>27</p>
+                        </div>
+                        
+                    </td>
+                    <td>
+                        <span>+2.5</span>
+                        <span>1.83</span>
+                    </td>
+                    <td>
+                        <span>O 109.5</span>
+                        <span>1.86</span>
+                    </td>
+                    <td>
+                        <span>2.25</span>
+                    </td>
+                    <td rowspan="2">
+                        <div class="img"><img src="images/iconfinder_23.Videos_290127.png" alt="" width="30px"height="30px"></div>
+                        
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span>-2.5</span>
+                        <span>1.83</span>
+                    </td>
+                    <td>
+                        <span>U 109.5</span>
+                        <span>1.80</span>
+                    </td>
+                    <td>
+                        <span>1.57</span>
+                    </td>
+                </tr>
+                <tr class="content bordert borderb">
+                    <td class="td1" rowspan="2">
+                        <p>Q3 03:12</p>
+                        <p>3&gt;</p>
+                    </td>
+                    <td colspan="2" rowspan="2">
+                        <div>
+                            <p>UTA Jazz (Shiva) Esports</p>
+                            <p>QKC Thunder (Aphex) Esports</p>
+                        </div>
+                        
+                    </td>
+                    <td class="border" rowspan="2">
+                        <div>
+                            <p>31</p>
+                            <p>18</p>
+                        </div>
+                        
+                    </td>
+                    <td class="bordernone">
+                        <span>-12.5</span>
+                        <span>1.83</span>
+                    </td>
+                    <td class="bordernone">
+                        <span>O 92.5</span>
+                        <span>1.86</span>
+                    </td>
+                    <td class="bordernone">
+                        <span>1.044</span>
+                    </td>
+                    <td rowspan="2">
+                        <div class="img"><img src="images/iconfinder_23.Videos_290127.png" alt="" width="30px"height="30px"></div>
+                    </td>
+                    <tr class="borderb">
+                        <td>
+                            <span>+12.5</span>
+                            <span>1.83</span>
+                        </td>
+                        <td>
+                            <span>U 92.5</span>
+                            <span>1.80</span>
+                        </td>
+                        <td>
+                            <span>8.75</span>
+                        </td>
+                    </tr>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="divflex2">
+        <div class="divflex2title">Dinamo-pro 3x3 <span>4</span> <span>5</span> Lokomotiv-pro 3x3</div>
+        <div class="hrwr"><span class="borderw"></span><span class="borderr"></span></div>
+        <div class="fieldimg"><img src="images/field.png" alt="" width="80%"><p>Stats</p></div>
+        <div class="hrg"><span class="borderg"></span></div>
+        <div>
+            <table class="table1">
+                <tr>
+                    <td colspan="2">07:01</td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>T</td>
+                </tr>
+                <tr>
+                    <td class="textw" colspan="2"><span class="borderlw"></span>Dinamo-pro 3x3</td>
+                    <td>4</td>
+                    <td></td>
+                    <td class="texty">4</td>
+                </tr>
+                <tr>
+                    <td class="textw" colspan="2"><span class="borderlr"></span>Lokomotiv-pro 3x3</td>
+                    <td>5</td>
+                    <td></td>
+                    <td class="texty">5</td>
+                </tr>
+            </table>
+            <table class="table2">
+                <tr>
+                    <td>
+                        <p class="borderbw">0</p>
+                        <p>Fouls</p>
+                    </td>
+                    <td>
+                        <p class="borderbw">4</p>
+                        <p>1Pts</p>
+                    </td>
+                    <td>
+                        <p class="borderbw">0</p>
+                        <p>2Pts</p>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <p class="borderbr">1</p>
+                        <p>2Pts</p>
+                    </td>
+                    <td>
+                        <p class="borderbr">3</p>
+                        <p>1Pts</p>
+                    </td>
+                    <td>
+                        <p class="borderbr">0</p>
+                        <p>Fouls</p>
+                    </td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td>
+                        <p class="fsbw">.</p>
+                        <p>Time Outs</p>
+                    </td>
+                    <td>
+                        <p class="borderbw"><span style="color: white;font-size: 11pt;">0 </span> 0%</p>
+                        <p class="textw" style="text-align: right;">Free</p>
+                    </td>
+                    <td>
+                        <p class="borderbr"><span style="color: white;font-size: 11pt;">0 </span> 0%</p>
+                        <p class="textw"  style="text-align: left;">Throws</p>
+                    </td>
+                    <td>
+                        <p class="fsbr">.</p>
+                        <p>Time Outs</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
