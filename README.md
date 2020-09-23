@@ -37,11 +37,11 @@
 
 # WORK4-改寫WORK3畫面
 - 說明：
-  * HTML
+  - HTML
     1. 移除無作用的標籤
     2. `<p>、<span>`以`<div>`代替
     3. 區塊要分出來
-  * CSS
+  - CSS
     1. class移除工具式寫法-改成白話式
     2. class命名不要有數字
     3. class用小駝峰命名
