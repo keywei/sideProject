@@ -27,10 +27,10 @@
 [book]: https://github.com/kamranahmedse/developer-roadmap
 
 # WORK3-改寫WORK2畫面
--說明：
+- 說明：
   1. 由於CSS-table是舊語法，用flex改寫
   2. 把CSS檔案改成外部連結
--閱讀：
+- 閱讀：
   1. 學習RWD
 - 開始時間：2020/09/18
 - 完成時間：2020/09/21
