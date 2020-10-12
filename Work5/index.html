@@ -4,96 +4,374 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <title>Document</title>
-    <link rel="stylesheet" href="CSS/work5.css">
+    <link rel="stylesheet" href="CSS/index.css">
+    <link rel="stylesheet" href="CSS/basketball.css">
     <script src="JS/work5.js"></script>
+
+
 </head>
 
 <body>
+    <button onclick="abc();">click</button>
+    <div id="aaa"></div>
     <div class="main">
-        <div class="mainHead">
-            <div class="mainHeadLeft">
-                <div><img src="images/refresh-button.svg" alt=""> RMB 0.00</div>
-                <div><img src="images/check.svg" alt=""> 投注記錄 <span>0</span> </div>
-            </div>
-            <div class="mainHeadRight">
-                <img src="images/transparent-speaker-icon-11.jpg" alt="">
-                <div class="mainHeadCarousel">
-                    <div class="mainHeadCarouselItem"></div>
+        <div class="mainScroll">
+            <div class="mainHead">
+                <div class="mainHeadLeft">
+                    <div><img src="images/refresh-button.svg" alt=""> RMB 0.00</div>
+                    <div><img src="images/check.svg" alt=""> 投注記錄 <span>0</span> </div>
                 </div>
-                <div class="mainHeadItem">
-                    <ul>
-                        <li>投注歷史</li>
-                        <li>已結算注單</li>
-                        <li>賽果</li>
-                        <li>體育博彩規則</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="mainBody">
-            <div class="category">
-                <div class="categoryMenu">滾球中</div>
-                <div id="category">
-                </div>
-                <div class="categoryMenu">體育菜單</div>
-                <div class="categoryMenuItems">
-                    <div>今日</div>
-                    <div>早盤</div>
-                    <div>連串過關</div>
-                </div>
-                <div class="categoryMenuItem">
-                    <div><img src="images/sport.svg" alt="">足球 <span>LIVE</span> <span>185</span></div>
-
-                </div>
-
-            </div>
-            <div class="oddsTable">
-                <div class="oddsTableHead">
-                    <div class="oddsTableKind">
-                        <span class="favAll">全部</span>
-                        <span class="favAllStar"><img src="images/star.svg" alt=""><span>0</span></span>
+                <div class="mainHeadRight">
+                    <img src="images/transparent-speaker-icon-11.jpg" alt="">
+                    <div class="mainHeadCarousel">
+                        <div class="mainHeadCarouselItem"></div>
                     </div>
-                    <div class="oddsTableItems">
+                    <div class="mainHeadItem">
                         <ul>
-                            <li><span>賠率：</span><span>歐洲盤</span>
-                                <select class="oddsTableItemSelect" name="" id="">
-                                    <option value="">歐洲盤</option>
-                                    <option value="">香港盤</option>
-                                </select>
-                            </li>
-                            <li>
-                                <span>選擇聯賽</span>
-                                <span>全部</span>
-                            </li>
-                            <li>
-                                單線盤口顯示
-                            </li>
-                            <li>
-                                <select class="oddsTableItemSorts" name="" id="">
-                                    <option value="">歐洲盤</option>
-                                    <option value="">香港盤</option>
-                                </select>
-                                <img src="images/awards+certificate+champion+cup+resume+winner+icon-1320190709133183386_0.svg">
-                            </li>
-                            <li class="">
-                                <img src="images/refresh-button.svg" alt="">
-                            </li>
+                            <li>投注歷史</li>
+                            <li>已結算注單</li>
+                            <li>賽果</li>
+                            <li>體育博彩規則</li>
                         </ul>
                     </div>
                 </div>
-                <div class="oddsTableHeadGameTitle">
+            </div>
+            <div class="mainBody">
+                <div class="category">
+                    <div class="categoryScorll">
+                        <div class="categoryMenu">滾球中</div>
+                        <div id="category">
+                        </div>
+                        <div class="categoryMenu">體育菜單</div>
+                        <div class="categoryMenuItems">
+                            <div>今日</div>
+                            <div>早盤</div>
+                            <div>連串過關</div>
+                        </div>
+                        <div class="categoryMenuItem">
 
+                        </div>
+                        <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">
+                            click  </button> -->
 
+                    </div>
                 </div>
 
+                <div class="oddsTable">
+                    <div class="oddsTableHead">
+                        <div class="oddsTableKind">
+                            <span class="favAll">全部</span>
+                            <span class="favAllStar"><img src="images/star.svg" alt=""><span>0</span></span>
+                        </div>
+                        <div class="oddsTableItems">
+                            <div>
+                                <div>賠率：</div>
+                                <div>歐洲盤</div>
+                                <div>
+                                    <select class="oddsTableItemSelect " name=" " id=" ">
+                                <option value=" ">歐洲盤</option>
+                                <option value=" ">香港盤</option>
+                                </select>
+                                </div>
+                            </div>
+                            <div>
+                                <div>選擇聯賽</div>
+                                <div>全部</div>
+                            </div>
+                            <div>單線盤口顯示</div>
+                            <div>
+                                <select class="oddsTableItemSorts " name=" " id=" ">
+                                <option value=" ">歐洲盤</option>
+                                <option value=" ">香港盤</option>
+                           </select>
+                                <img src="images/awards+certificate+champion+cup+resume+winner+icon-1320190709133183386_0.svg ">
+                            </div>
+                            <div>
+                                <img src="images/refresh-button.svg " alt=" ">
+                            </div>
+                        </div>
 
-                <div class="oddsTableScoreKind">
+                    </div>
+                    <div class="oddsTableHeadGameTitle">
 
+
+                    </div>
 
                 </div>
             </div>
+
         </div>
+
+    </div>
+    <!-- <object class="jsAddSoccer" data="soccer.html">
+    </object>
+    <button id="ccc" onclick="dd();">click</button> -->
+    <!-- Button trigger modal -->
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+
+            <div class="modal-content">
+
+                <div class="tableBasketballHead">
+                    <div class="tableBasketballHeadLeft">滾球</div>
+                    <div class="tableBasketballHeadRight">
+                        <div>賠率:</div>
+                        <div>歐洲盤</div>
+                        <div><img src="images/nextpng.com.png" alt=""></div>
+                        <div><img src="images/refresh-button.svg" alt=""></div>
+                    </div>
+                    <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button> -->
+                </div>
+                <div class="modal-body">
+                    <div class="tableBasketball">
+                        <div class="tableBasketballHeadItems">
+                            <div class="tableBasketballHeadTitle">NBA2K-Cyber NBA ALL Stars League (4x5mins)</div>
+                            <div class="tableBasketballHeadField">
+                                <div class="tableBasketballHeadFieldLeft">
+                                    <div>第二節</div>
+                                    <div>01:58</div>
+                                </div>
+                                <div class="tableBasketballHeadFieldRight">
+                                    <div class="tableBasketballHeadFieldRightTime">
+                                        <div>第一節</div>
+                                        <div>第二節</div>
+                                        <div>第三節</div>
+                                        <div>第四節</div>
+                                        <div>加時賽</div>
+                                    </div>
+                                    <div class="tableBasketballHeadFieldRightTotal">
+                                        <div>上半場</div>
+                                        <div>下半場</div>
+                                        <div>總計</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tableBasketballHeadFieldTeam">
+                                <div class="tableBasketballHeadFieldTeamLeft">休斯敦火箭(SLAMDUNKVV)</div>
+                                <div class="tableBasketballHeadFieldTeamRight">
+                                    <div class="tableBasketballHeadFieldTeamRightTime">
+                                        <div>12</div>
+                                        <div>6</div>
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                    </div>
+                                    <div class="tableBasketballHeadFieldTeamRightTotal">
+                                        <div>18</div>
+                                        <div></div>
+                                        <div>18</div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="tableBasketballHeadFieldTeam">
+                                <div class="tableBasketballHeadFieldTeamLeft">丹佛掘金(HURRICANE)</div>
+                                <div class="tableBasketballHeadFieldTeamRight">
+                                    <div class="tableBasketballHeadFieldTeamRightTime">
+                                        <div>13</div>
+                                        <div>8</div>
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                    </div>
+                                    <div class="tableBasketballHeadFieldTeamRightTotal">
+                                        <div>21</div>
+                                        <div></div>
+                                        <div>21</div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="tableBasketballMyFavorite">
+                            <div class="tableBasketballMyFavoriteLeft">
+                                <div><img src="images/star-yellow.svg" alt=""></div>
+                                <div>我的盤口</div>
+                            </div>
+                            <div class="tableBasketballMyFavoriteRight">
+                                <img src="images/nextpng.com.png" alt=""></div>
+
+                        </div>
+                        <div class="tableBasketballPopular">受歡迎的</div>
+                        <div>
+                            <div class="tableBasketballTotalScoreHead">
+                                <div class="tableBasketballTotalScoreHeadLeft">總得分:滾球 單/雙</div>
+                                <div class="tableBasketballTotalScoreHeadRight"><img src="images/star_white.svg" alt=""></div>
+                            </div>
+                            <div class="tableBasketballTotalScore">
+                                <div class="tableBasketballTotalScoreLeft">
+                                    <div>單</div>
+                                    <div>1.90</div>
+                                </div>
+                                <div class="tableBasketballTotalScoreRight">
+                                    <div>雙</div>
+                                    <div>1.90</div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div>
+                            <div class="tableBasketballSpreadHead">
+                                <div class="tableBasketballSpreadHeadLeft">滾球 讓球-
+                                    <div>第三節</div>
+                                </div>
+                                <div class="tableBasketballSpreadHeadRight"><img src="images/star_white.svg" alt=""></div>
+                            </div>
+                            <div class="tableBasketballSpreadScore">
+                                <div class="tableBasketballSpreadScoreLeft">
+                                    <div>休斯敦火箭(SLAMDUNKVV)</div>
+                                    <div>+2</div>
+                                    <div>1.85</div>
+                                </div>
+                                <div></div>
+                            </div>
+                            <div class="tableBasketballSpreadScore">
+                                <div class="tableBasketballSpreadScoreLeft">
+                                    <div>丹佛掘金(HURRICANE)</div>
+                                    <div>-2</div>
+                                    <div>1.85</div>
+                                </div>
+                                <div></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="tableBasketballSpreadOverUnderHead">
+                                <div class="tableBasketballSpreadOverUnderHeadLeft">總得分:滾球 大/小-
+                                    <div>第三節</div>
+                                </div>
+                                <div class="tableBasketballSpreadHeadOverUnderRight"><img src="images/star_white.svg" alt=""></div>
+                            </div>
+                            <div class="tableBasketballSpreadOverUnderScore">
+                                <div class="tableBasketballSpreadOverUnderScoreLeft">
+                                    <div>大</div>
+                                    <div>
+                                        <div>O</div>
+                                        <div>28</div>
+                                    </div>
+                                    <div>1.83</div>
+                                </div>
+                                <div></div>
+                            </div>
+                            <div class="tableBasketballSpreadOverUnderScore">
+                                <div class="tableBasketballSpreadOverUnderScoreLeft">
+                                    <div>小</div>
+                                    <div>
+                                        <div>U</div>
+                                        <div>28</div>
+                                    </div>
+                                    <div>1.83</div>
+                                </div>
+                                <div></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="tableBasketballTotalScoreOddEvenHead">
+                                <div class="tableBasketballTotalScoreOddEvenHeadLeft">總得分:滾球 單/雙-
+                                    <div>第三節</div>
+                                </div>
+                                <div class="tableBasketballTotalScoreOddEvenHeadRight"><img src="images/star_white.svg" alt=""></div>
+                            </div>
+                            <div class="tableBasketballTotalScoreOddEven">
+                                <div class="tableBasketballTotalScoreOddEvenLeft">
+                                    <div>單</div>
+                                    <div>1.90</div>
+                                </div>
+                                <div class="tableBasketballTotalScoreOddEvenRight">
+                                    <div>雙</div>
+                                    <div>1.90</div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div>
+                            <div class="tableBasketballSpreadHead">
+                                <div class="tableBasketballSpreadHeadLeft">滾球 讓球-
+                                    <div>第四節</div>
+                                </div>
+                                <div class="tableBasketballSpreadHeadRight"><img src="images/star_white.svg" alt=""></div>
+                            </div>
+                            <div class="tableBasketballSpreadScore">
+                                <div class="tableBasketballSpreadScoreLeft">
+                                    <div>休斯敦火箭(SLAMDUNKVV)</div>
+                                    <div>+1</div>
+                                    <div>1.85</div>
+                                </div>
+                                <div></div>
+                            </div>
+                            <div class="tableBasketballSpreadScore">
+                                <div class="tableBasketballSpreadScoreLeft">
+                                    <div>丹佛掘金(HURRICANE)</div>
+                                    <div>-1</div>
+                                    <div>1.85</div>
+                                </div>
+                                <div></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="tableBasketballSpreadOverUnderHead">
+                                <div class="tableBasketballSpreadOverUnderHeadLeft">總得分:滾球 大/小-
+                                    <div>第四節</div>
+                                </div>
+                                <div class="tableBasketballSpreadHeadOverUnderRight"><img src="images/star_white.svg" alt=""></div>
+                            </div>
+                            <div class="tableBasketballSpreadOverUnderScore">
+                                <div class="tableBasketballSpreadOverUnderScoreLeft">
+                                    <div>大</div>
+                                    <div>
+                                        <div>O</div>
+                                        <div>28</div>
+                                    </div>
+                                    <div>1.83</div>
+                                </div>
+                                <div></div>
+                            </div>
+                            <div class="tableBasketballSpreadOverUnderScore">
+                                <div class="tableBasketballSpreadOverUnderScoreLeft">
+                                    <div>小</div>
+                                    <div>
+                                        <div>U</div>
+                                        <div>28</div>
+                                    </div>
+                                    <div>1.83</div>
+                                </div>
+                                <div></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="tableBasketballTotalScoreOddEvenHead">
+                                <div class="tableBasketballTotalScoreOddEvenHeadLeft">總得分:滾球 單/雙-
+                                    <div>第四節</div>
+                                </div>
+                                <div class="tableBasketballTotalScoreOddEvenHeadRight"><img src="images/star_white.svg" alt=""></div>
+                            </div>
+                            <div class="tableBasketballTotalScoreOddEven">
+                                <div class="tableBasketballTotalScoreOddEvenLeft">
+                                    <div>單</div>
+                                    <div>1.90</div>
+                                </div>
+                                <div class="tableBasketballTotalScoreOddEvenRight">
+                                    <div>雙</div>
+                                    <div>1.90</div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
 
 </body>
 

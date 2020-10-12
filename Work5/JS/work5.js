@@ -9,7 +9,6 @@ var speaker = `足球赛事:09月27日 意大利丙组联赛 (阿维利诺 VS �
 , 足球赛事:09月25日 电竞足球-职业联赛-12分钟比赛 (Fints (FIN) Esports VS 秥恩卡特(NFC)电竞) 因赛事提前至10:58开赛, 所有投注在10:57:59之后的注单一律取消, 过关以 (1) 计算.
 , 足球赛事: 09月25日 中国超级联赛 (上海上港  VS 北京中赫国安 )- 因电视裁判助理的重新判定，所有投注在(GMT -04:00)08:37:54~08:41:30的注单一律取消, 篮球赛事:09月25日 NBA2K - Cyber NBA Eastern Conference (4x5mins) (克里夫兰骑士 (Tranquil) VS 奥兰多魔术(iamdevilwalk)) 因滚球大小盘口错误, 滚球注单号:100981210905823,83658103248112一律取消., 足球赛事: 09月25日 中国超级联赛 (上海上港 -罚牌数 VS 北京中赫国安 -罚牌数)- 因电视裁判助理的重新判定，所有投注在(GMT -04:00)08:37:54~08:41:30的注单一律取消, 乒乓球赛事:09月25日 俄罗斯莫斯科甲组联赛(男单) (叶夫根尼.格里沙耶夫 VS 阿尔特姆.阿鲁蒂安扬) 因赛事取消, 所有的注单一律取消,过关以 (1) 计算!!, 足球赛事:09月24日 墨西哥甲组联赛 (奥哈卡 VS 莫雷利亚竞技) 因滚球赔率错误, 所有投注在(GMT -04:00) 20:44:42至20:47:32的注单一律取消., 足球赛事:09月24日 电竞足球-FIFA 20 CLA意大利杯-10分钟比赛 (Juventus (Olom) Esports VS Napoli (Skripp) Esports) 因滚球比分输入错误, 所有投注在(GMT -04:00) 19:15:22至19:17:19的注单一律取消, 正确滚球比分为(1-0).
 , 足球赛事:09月24日 欧洲超级杯-特别投注 (拜仁慕尼黑-冠军 VS 塞维利亚-冠军) 因全场滚球让球赔率错误, 所有投注在(GMT -04:00) 17:11:09至17:11:17的让球注单一律取消., 足球赛事:09月24日 欧洲超级杯-加时赛-特别投注 (拜仁慕尼黑-角球数 VS 塞维利亚-角球数) 因滚球大小赔率错误, 滚球注单号:99978617417428一律取消., 足球赛事:09月24日 欧洲超级盃 (拜仁慕尼黑 VS 西维尔) 因电视裁判助理的重新判定, 所有投注在(GMT -04:00) 16:09:29至16:10:49的注单一律取消., 足球赛事:09月24日 欧洲超级盃 (拜仁慕尼黑 VS 西维尔) 因电视裁判助理的重新判定, 所有投注在(GMT -04:00) 16:21:25至16:22:25的注单一律取消., 电子竞技:09月24日 ESL Pro League 美洲(反恐精英)(3场2胜)-特别投注 (Evil Geniuses - 第二局 VS FURIA eS- 第二局) 因第十六回合赢家滚球赔率错误, 所有投注在14:38:00至14:40:10的注单一律取消., 足球赛事:09月24日 球会友谊赛 (洛尔卡 VS 梅西亚) 因滚球比分输入错误, 所有投注在(GMT -04:00) 14:30:19至14:32:28的注单一律取消, 正确滚球比分为(1-0)., 足球赛事:09月24日 冰岛超级联赛 (葛洛塔 VS KR雷克雅未克) 因主客场错误,所有的注单一律取消, 过关以 (1) 计算.正确主队为(KR雷克雅未克)., 电子竞技:09月24日 DreamHack Qualifier(反恐精英)(3场2胜)-特别投注 (Movistar Riders - 第二局 VS SKADE- 第二局) 因全场滚球单双赔率错误, 所有投注在11:19:02至11:34:52的单双注单一律取消., 足球赛事:09月24日 中国超级联赛-特别投注 (江苏苏宁 -罚牌数 VS 广州恒大-罚牌数) 因滚球比分输入错误, 所有投注在(GMT -04:00) 07:44:03至07:48:32的注单一律取消, 正确滚球比分为(1-2)., 足球赛事:09月24日 电竞足球-职业联赛-12分钟比赛 (甘比特(GMB)电竞  VS Allianz (ALL) Esports) 因赛事提前至(GMT -04:00) 04:55开赛,除滚球注单外, 所有投注在04:54:59之后的注单一律取消, 过关以 (1) 计算., 电子竞技:09月24日 早盘 ESEA 欧洲(反恐精英)(1场1胜) (Wisla Krakow eS VS GamerLegion) 因全场让球赔率错误, 所有投注在(09月23日)23:34:25至(09月24日)00:59:40的让球注单一律取消.过关以 (1) 计算.`
-var nber = [3, 2, 5, 6, 4];
 var categoryMenuItems = ["讓球＆大小盤", "獨贏盤(半場＆全場)", "入場數-雙/單", "總入球", "半場/全場"];
 var soccer = [{
     "gameHead": "哈薩克斯坦甲組聯賽",
@@ -38,7 +37,7 @@ var soccer = [{
 }, {
     "gameHead": "電競足球-FIFA20 CLA德國盃-10分鐘比賽",
     "time": ["2-1", "上半場", "03:41", ""],
-    "team": ["Bayern Munich(Praym)Esports", "Rb Leipzig(Dimqaa)Esports", "和局"],
+    "team": ["Bayern Munich (Praym) Esports", "Rb Leipzig (Dimqaa) Esports", "和局"],
     "single": ["4.35", "1.62", "3.30"],
     "spreadScore": ["0/0.5", "", ""],
     "spread": ["1.84", "1.86", ""],
@@ -87,7 +86,7 @@ var soccer = [{
 var basketball = [{
     "gameHead": "NBA2K-CYBER NBA ALL STARS LEAGUE(4X5MINS)",
     "time": ["18-21", "第二節", "02:06"],
-    "team": ["休斯敦火箭(SLAMDUNKVV)", "丹佛掘金(HURRICANE)"],
+    "team": ["休斯敦火箭 (SLAMDUNKVV)", "丹佛掘金 (HURRICANE)", "7"],
     "single": ["", ""],
     "spreadScore": ["", ""],
     "spread": ["", ""],
@@ -97,21 +96,19 @@ var basketball = [{
     ],
     "overUnder": ["", ""],
     "TeamOverUnderScore": ["", ""],
-    "TeamOverUnder": ["", ""]
-}, {
-    "gameHead": "NBA2K-CYBER NBA ALL STARS LEAGUE(4X5MINS)",
-    "time": ["17-21", "第二節", "03:30"],
-    "team": ["雅特蘭大老鷹(MVP)", "金州勇士(Shiva)"],
-    "single": ["", ""],
-    "spreadScore": ["", "5.5"],
-    "spread": ["1.85", "1.85"],
-    "overUnderScore": [
+    "TeamOverUnder": ["", ""],
+    "twotime": ["17-21", "第二節", "03:30"],
+    "twoteam": ["雅特蘭大老鷹 (MVP)", "金州勇士 (Shiva)", "12"],
+    "twosingle": ["", ""],
+    "twospreadScore": ["", "5.5"],
+    "twospread": ["1.85", "1.85"],
+    "twooverUnderScore": [
         ["大", "115.5"],
         ["小", "115.5"]
     ],
-    "overUnder": ["1.80", "1.80"],
-    "TeamOverUnderScore": ["", ""],
-    "TeamOverUnder": ["", ""]
+    "twooverUnder": ["1.80", "1.80"],
+    "twoTeamOverUnderScore": ["", ""],
+    "twoTeamOverUnder": ["", ""]
 }]
 var category = [
     ['所有體育項目', "allGame"],
@@ -122,13 +119,92 @@ var category = [
     // ['電子競技', "Streaming"]
 ];
 window.onload = function() {
-    // oddsTableTeam(soccer);
-    // console.log(soccer[0])
+    // 完成品後要提出來
+    ensp(soccer)
+    ensp(basketball)
+    var nber = [soccer.length, basketball.length];
+    // var ay = [];
+    // var tt = document.getElementById("ccc");
+    // tt.addEventListener("click", c);
+
+    // function c() {
+    //     var ee = document.querySelectorAll("img[src='images/star_white.svg']")
+    //     for (var i = 0; i < ee.length; i++) {
+    //         (function(x) {
+    //             ee[x].addEventListener('click', function() {
+    //                 console.log(ee[x].parentNode.parentNode.parentNode)
+    //                 console.log(this.parentNode)
+    //             })
+
+    //         })(i);
+    //     }
+    // }
+
+    var categoryMenuItemsActive = document.getElementsByClassName("categoryMenuItems");
+    var categoryMenuItemsActiveLength = categoryMenuItemsActive[0].getElementsByTagName("div").length
+        // 選單鈕觸發變色
+    for (var i = 0; i < categoryMenuItemsActiveLength; i++) {
+        (function(x) {
+            categoryMenuItemsActive[0].getElementsByTagName("div")[x].addEventListener("click", function() {
+                for (var i = 0; i < categoryMenuItemsActiveLength; i++) {
+                    categoryMenuItemsActive[0].getElementsByTagName("div")[i].style.backgroundColor = "rgb(40, 38, 38)";
+                    categoryMenuItemsActive[0].getElementsByTagName("div")[i].style.color = "rgb(138, 133, 133)";
+                }
+                this.style.backgroundColor = "rgb(50, 166, 222)";
+                this.style.color = "white";
+            })
+        })(i);
+
+    }
+    // console.log(cc[0].getElementsByTagName("div")[0])
+
+    // var bb = document.getElementsByClassName("oddsTableCurrentGameTime");
+    // bb[1].removeChild(bb[1].lastChild);
+    // console.log(bb[0].lastChild)
+    //     console.log(bb[0].childNodes[4].removeChild);
+
+
+    // 瘦身 註解
+    // 因flex塞空值會不佔空間造成跑版，迴圈放入&ensp
+    function ensp(database) {
+        if (Array.isArray(database)) {
+            database.forEach(function(value) {
+                if (typeof value == "object") {
+                    for (var i in value) {
+                        if (Array.isArray(value[i])) {
+                            value[i].forEach(function(val, index) {
+                                if (val == "") {
+                                    value[i][index] = "&ensp;"
+
+                                }
+                            })
+                        }
+                    }
+                }
+            })
+
+        } else if (typeof database == "object") {
+            for (var i in database) {
+                if (Array.isArray(database[i])) {
+                    database[i].forEach(function(val, index) {
+                        if (val == "") {
+                            database[i][index] = "&ensp;"
+
+                        }
+                    })
+                } else if (database[i] == "") {
+                    database[i] = "&ensp;"
+                }
+            }
+        }
+
+    }
+
     var all = nber.reduce(function(total, value) {
         return total + value;
     })
     nber.unshift(all);
-    // console.log(nber)
+
     var addCategory = document.getElementById("category");
     var categoryLiItem = document.getElementsByName("category");
     var categoryMenuItem = document.getElementsByClassName("categoryMenuItem")[0];
@@ -140,8 +216,7 @@ window.onload = function() {
     mainHeadCarouselItem.appendChild(mainHeadCarouselItemDiv);
     var mainHeadCarouselItemWidth = mainHeadCarouselItem.offsetWidth;
 
-
-
+    // 跑馬燈
     var timeOver;
     if (mainHeadCarouselItemWidth > mainHeadCarousel.scrollLeft) {
         Carousel();
@@ -173,23 +248,26 @@ window.onload = function() {
             var categorySpan = document.createElement("span");
             var categoryText = document.createTextNode(value[0]);
             var categoryTextNum = document.createTextNode(nber[index]);
+            // var ifmee = document.getElementById("ifme");
+
             categorySpan.appendChild(categoryTextNum);
             categoryInput.type = "checkbox";
             categoryInput.name = "category";
             categoryInput.id = "category" + index;
             categoryInput.value = value[0];
+            // 分離、有需要的參數 瘦身
+            // 球類選項觸發渲染畫面
             categoryInput.onclick = (function(even) {
-                var oddsTableScoreKind = document.getElementsByClassName("oddsTableScoreKind")[0];
                 var oddsTableHeadGameTitle = document.getElementsByClassName("oddsTableHeadGameTitle")[0];
 
                 if (even.target.id == "category0" && categoryLiItem[0].checked == true) {
                     oddsTableHeadGameTitle.innerHTML = "";
-                    oddsTableScoreKind.innerHTML = "";
                     for (let x = 1; x < categoryLiItem.length; x++) {
                         categoryLiItem[x].checked = true;
                         switch (categoryLiItem[x].value) {
                             case "足球":
                                 addTitleSoccer();
+
                                 if (category[x][1].length >= 2) {
                                     for (let y = 0; y < category[x][1].length; y++) {
 
@@ -197,7 +275,7 @@ window.onload = function() {
 
                                     }
                                 } else {
-                                    oddsTableTeam(category[x][1]);
+                                    oddsTableTeam(category[x][1][0]);
                                 }
                                 break;
                             case "籃球":
@@ -209,16 +287,40 @@ window.onload = function() {
 
                                     }
                                 } else {
-                                    oddsTableTeamBasketball(category[x][1]);
+                                    oddsTableTeamBasketball(category[x][1][0]);
                                 }
                                 break;
                         }
 
 
                     }
+                    var GameTime = document.getElementsByClassName("oddsTableCurrentGameTime");
+                    for (let i = 0; i < GameTime.length; i++) {
+                        console.log(GameTime[i].getElementsByTagName("div")[3])
+                            // if (GameTime[i].getElementsByTagName("div")[3]) {
+                            //     console.log("no")
+                            // } else
+                            //     console.log(GameTime[i].getElementsByTagName("div")[3].innerText)
+
+
+
+                        // console.log(b)
+                        // console.log(oddsTableCurrentGameTime[i]);
+                    }
+                    // var el = document.getElementById("abc");
+                    // el.onclick = function() {
+                    //     console.log(ifmee.style.display)
+                    //     if (ifmee.style.display == "") {
+                    //         ifmee.style.display = "none"
+                    //     } else {
+                    //         ifmee.style.display = ""
+                    //         ifmee.style.zIndex = "1"
+                    //         oddsTableHeadGameTitle.style.display = "none"
+                    //     }
+                    // }
+                    // console.log(el)
                 } else {
                     if (even.target.id == "category0" && categoryLiItem[0].checked == false) {
-                        oddsTableScoreKind.innerHTML = "";
                         oddsTableHeadGameTitle.innerHTML = "";
                         addTitleSoccer();
 
@@ -234,11 +336,9 @@ window.onload = function() {
 
 
                     } else {
-                        oddsTableScoreKind.innerHTML = "";
                         oddsTableHeadGameTitle.innerHTML = "";
                         for (let x = 0; x < categoryLiItem.length; x++) {
                             if (categoryLiItem[x].id == even.target.id) {
-                                oddsTableScoreKind.innerHTML = "";
                                 categoryLiItem[x].checked = true;
                                 switch (even.target.value) {
                                     case "足球":
@@ -248,7 +348,7 @@ window.onload = function() {
                                                 oddsTableTeam(category[x][1][y]);
                                             }
                                         } else {
-                                            oddsTableTeam(category[x][1]);
+                                            oddsTableTeam(category[x][1][0]);
                                         }
                                         break;
                                     case "籃球":
@@ -260,7 +360,7 @@ window.onload = function() {
 
                                             }
                                         } else {
-                                            oddsTableTeamBasketball(category[x][1]);
+                                            oddsTableTeamBasketball(category[x][1][0]);
                                         }
                                         break;
                                 }
@@ -282,25 +382,61 @@ window.onload = function() {
 
         })
     }
-
-    categoryMenuItems.map(function(value) {
-        var categoryMenuItemDiv = document.createElement("div");
-        var categoryMenuItemText = document.createTextNode(value);
-        var categoryMenuItemSpan = document.createElement("span");
+    // 體育菜單場次亂數產生
+    function addcategoryMenuItem(Items) {
+        categoryMenuItem.innerHTML = "";
         var MathRandom = Math.floor(Math.random() * 200).toString();
-        var categoryMenuItemNum = document.createTextNode(MathRandom);
-        categoryMenuItemDiv.appendChild(categoryMenuItemText);
-        categoryMenuItemSpan.appendChild(categoryMenuItemNum);
-        categoryMenuItemDiv.appendChild(categoryMenuItemSpan);
-        categoryMenuItem.appendChild(categoryMenuItemDiv);
-    })
+        categoryMenuItem.innerHTML = `
+        <div><img src="images/sport.svg" alt="">足球 <span>LIVE</span> <span>${MathRandom}</span></div>
+        `;
+        Items.map(function(value) {
+            var categoryMenuItemDiv = document.createElement("div");
+            var categoryMenuItemText = document.createTextNode(value);
+            var categoryMenuItemSpan = document.createElement("span");
+            var MathRandom = Math.floor(Math.random() * 200).toString();
+            var categoryMenuItemNum = document.createTextNode(MathRandom);
+            categoryMenuItemDiv.appendChild(categoryMenuItemText);
+            categoryMenuItemSpan.appendChild(categoryMenuItemNum);
+            categoryMenuItemDiv.appendChild(categoryMenuItemSpan);
+            categoryMenuItem.appendChild(categoryMenuItemDiv);
+        })
+    }
+    addcategoryMenuItem(categoryMenuItems);
 
+    // var cc = document.getElementById("ccc")
+    // cc.addEventListener("click", adbu)
+
+    // function adbu() {
+    //     var addfavorite = document.querySelectorAll("img[src='images/star_white.svg']");
+    //     console.log(addfavorite)
+    //     for (var i = 0; 0 < addfavorite.length; i++) {
+    //         addfavorite[i].addEventListener("click", function() {
+    //             console.log("123");
+    //         });
+
+    //     }
+    // }
+
+    // function bb() {
+    //     console.log("OK")
+    // }
+
+
+
+
+
+
+
+
+    // 足球大標題
     function addTitleSoccer() {
         var oddsTableHeadGameTitle = document.getElementsByClassName("oddsTableHeadGameTitle")[0];
         var title =
             `<div class="oddsTableHeadGame">
            
-            <div class="oddsTableHeadStatus"><span>足球</span> <span>滾球</span></div>
+        <div class="oddsTableHeadStatus">
+          <span>足球</span> <span>滾球</span>
+        </div>
         <div class="oddsTableSingle">獨贏盤</div>
         <div class="oddsTableScore"></div>
         <div class="oddsTableSpread">
@@ -317,10 +453,11 @@ window.onload = function() {
         </div>
         <div class="oddsTableScore"></div>
         <div class="oddsTableOverUnder">大/小</div>
-        <div class="oddsTableStar"></div> </div>`
+        <div class="oddsTableStar"></div>
+            </div>`
         oddsTableHeadGameTitle.innerHTML += title;
     }
-
+    // 籃球大標題
     function addTitleBasketball() {
         var oddsTableHeadGameTitle = document.getElementsByClassName("oddsTableHeadGameTitle")[0];
         var title =
@@ -334,9 +471,9 @@ window.onload = function() {
                     <div class="oddsTableOverUnderBasketball">大/小</div>
                     <div class="oddsTableTeamScoreBasketball"></div>
                     <div class="oddsTableTeamBasketball">球隊 大/小</div>
-                    <div class="oddsTableTeamBasketball"></div>
-                    <div class="oddsTableTeamBasketball"><div>
-                    <div class="oddsTableTeamBasketball"><div>
+                    <div class="oddsTableTeamBasketballEnsp"></div>
+                    <div class="oddsTableTeamBasketballEnsp"><div>
+                    <div class="oddsTableTeamBasketballEnsp"><div>
             </div>
             </div>
         `;
@@ -349,13 +486,13 @@ window.onload = function() {
         oddsTableHeadGameTitle.innerHTML += titleItem
     }
 
-    var oddsTableScoreKind = document.getElementsByClassName("oddsTableScoreKind")[0];
+    var oddsTableHeadGameTitle = document.getElementsByClassName("oddsTableHeadGameTitle")[0];
+    // 足球表
 
     function oddsTableTeam(x) {
-        // var oddsTableScoreKind = document.getElementsByClassName("oddsTableScoreKind")[0];
         var gameTable =
-            `
-            <div class="oddsTableTeam">
+            `<div class="oddsTableScoreKind">
+        <div class="oddsTableTeam">
         <div>${x.gameHead}</div>
         <div><img src="images/star_white.svg" alt=""></div>
         </div>
@@ -369,7 +506,7 @@ window.onload = function() {
         <div class="oddsTableCurrentTeams">
             <div>${x.team[0]}</div>
             <div>${x.team[1]}</div>
-            <div>${x.team[2]}<span>9&gt;</span></div>
+            <div>${x.team[2]}<span id="abc">9&gt;</span></div>
         </div>
         <div class="oddsTableSingle">
             <div>${x.single[0]}</div>
@@ -423,8 +560,8 @@ window.onload = function() {
         </div>
         <div class="oddsTableStar">
             <div><img src="images/star_white.svg" alt="" width="15px" height="15px"></div>
-            <div></div>
-            <div></div>
+            <div>&ensp;</div>
+            <div>&ensp;</div>
         </div>
 
     </div>
@@ -480,15 +617,18 @@ window.onload = function() {
                         <div></div>
                     </div>
 
+        </div>
         </div>`;
-        oddsTableScoreKind.innerHTML += gameTable;
+        oddsTableHeadGameTitle.innerHTML += gameTable;
+
+
 
     }
-
+    // 籃球表
     function oddsTableTeamBasketball(x) {
-        // var oddsTableScoreKind = document.getElementsByClassName("oddsTableScoreKind")[0];
 
         var gameTable = `
+        <div class="oddsTableScoreKind">
     <div class="oddsTableTeam">
         <div>${x.gameHead}</div>
         <div><img src="images/star_white.svg" alt=""></div>
@@ -501,7 +641,7 @@ window.onload = function() {
         </div>
         <div class="oddsTableCurrentTeamsBasketball">
             <div>${x.team[0]}</div>
-            <div>${x.team[1]}<span>9&gt;</span></div>
+            <div>${x.team[1]}<span>${x.team[2]}&gt;</span></div>
         </div>
         <div class="oddsTableSingleBasketball">
             <div>${x.single[0]}</div>
@@ -539,56 +679,80 @@ window.onload = function() {
     </div>
     <div class="oddsTableCurrentGameBasketball">
         <div class="oddsTableCurrentGameTimeBasketball">
-            <div>${x.time[0]}</div>
-            <div>${x.time[1]}</div>
-            <div>${x.time[2]}</div>
+            <div>${x.twotime[0]}</div>
+            <div>${x.twotime[1]}</div>
+            <div>${x.twotime[2]}</div>
         </div>
         <div class="oddsTableCurrentTeamsBasketball">
-            <div>${x.team[0]}</div>
-            <div>${x.team[1]}<span>9&gt;</span></div>
+            <div>${x.twoteam[0]}</div>
+            <div>${x.twoteam[1]}<span>${x.twoteam[2]}&gt;</span></div>
         </div>
         <div class="oddsTableSingleBasketball">
-            <div>${x.single[0]}</div>
-            <div>${x.single[1]}</div>
+            <div>${x.twosingle[0]}</div>
+            <div>${x.twosingle[1]}</div>
         </div>
         <div class="oddsTableSpreadScoreBasketball">
-            <div>${x.spreadScore[0]}</div>
-            <div>${x.spreadScore[1]}</div>
+            <div>${x.twospreadScore[0]}</div>
+            <div>${x.twospreadScore[1]}</div>
         </div>
         <div class="oddsTableSpreadBasketball">
-            <div>${x.spread[0]}</div>
-            <div>${x.spread[1]}</div>
+            <div>${x.twospread[0]}</div>
+            <div>${x.twospread[1]}</div>
         </div>
         <div class="oddsTableOverUnderScoreBasketball">
-            <div><span>${x.overUnderScore[0][0]}</span><span>${x.overUnderScore[0][1]}</span></div>
-            <div><span>${x.overUnderScore[1][0]}</span><span>${x.overUnderScore[1][1]}</span></div>
+            <div><span>${x.twooverUnderScore[0][0]}</span><span>${x.twooverUnderScore[0][1]}</span></div>
+            <div><span>${x.twooverUnderScore[1][0]}</span><span>${x.twooverUnderScore[1][1]}</span></div>
         </div>
         <div class="oddsTableOverUnderBasketball">
-            <div>${x.overUnder[0]}</div>
-            <div>${x.overUnder[1]}</div>
+            <div>${x.twooverUnder[0]}</div>
+            <div>${x.twooverUnder[1]}</div>
         </div>
         <div class="oddsTableTeamoverUnderScoreBasketball">
-            <div>${x.TeamOverUnderScore[0]}</div>
-            <div>${x.TeamOverUnderScore[1]}</div>
+            <div>${x.twoTeamOverUnderScore[0]}</div>
+            <div>${x.twoTeamOverUnderScore[1]}</div>
         </div>
         <div class="oddsTableTeamoverUnderBasketball">
-            <div>${x.TeamOverUnder[0]}</div>
-            <div>${x.TeamOverUnder[1]}</div>
+            <div>${x.twoTeamOverUnder[0]}</div>
+            <div>${x.twoTeamOverUnder[1]}</div>
         </div>
         <div class="oddsTableStarBasketball">
             <div><img src="images/star_white.svg" alt="" width="15px" height="15px"></div>
             <div></div>
             <div></div>
         </div>
+    </div>
     </div>`;
-        oddsTableScoreKind.innerHTML += gameTable;
+        oddsTableHeadGameTitle.innerHTML += gameTable;
     }
-    // addTitleBasketball();
-    // oddsTableTeamBasketball(basketball[1]);
+
+
+    // function getTime() {
+    //     var gameTime = document.getElementsByClassName("oddsTableCurrentGameTime")
+    //     for (var i = 0; i < gameTime.length; i++) {
+    //         console.log(gameTime[i].getElementsByTagName("div")[2]);
+    //     }
+
+    // }
+    var timestamp = parseInt(new Date().getTime() / 1000);
+    console.log(timestamp)
+    var dateStr = '2015-03-05 17:59:00.0';
+    dateStr = dateStr.substring(0, 19);
+    dateStr = dateStr.replace(/-/g, '/');
+    var timeTamp1 = new Date(dateStr).getTime();
+    console.log(timeTamp1)
 
 
 
+}
 
 
 
+function dd() {
+    // var hh = document.getElementsByClassName("mainScroll")[0];
+    // var qa = `<object class="jsAddSoccer" data="soccer.html">
+    // </object>`
+    var gg = document.getElementsByClassName("jsAddSoccer")[0];
+    // hh.innerHTML += qa;
+    // console.log(gg.style.visibility);
+    gg.style.visibility = "visible"
 }

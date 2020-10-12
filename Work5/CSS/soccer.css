@@ -1,0 +1,365 @@
+body {
+    width: 100%;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.tableSoccerNav {
+    width: 70%;
+    text-align: center;
+    margin: 0px auto;
+    border: 1px solid gray;
+    background-color: white;
+}
+
+.tableSoccerScroll {
+    height: 100%;
+    /* background-color: rgba(255, 255, 255, 0.5); */
+}
+
+.tableSoccer {
+    height: 800px;
+    width: 70%;
+    text-align: center;
+    overflow-y: scroll;
+    margin: 0px auto;
+    border: 1px solid gray;
+    background-color: white;
+}
+
+.tableSoccerHead {
+    display: flex;
+    background-color: rgb(53, 192, 235);
+    align-items: center;
+}
+
+.tableSoccerHeadLeft {
+    flex: 1;
+    display: flex;
+    align-self: flex-start;
+    font-size: 1.3em;
+    color: white;
+    font-weight: bold;
+    padding-left: 10px;
+}
+
+.tableSoccerHeadRight {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex: 1;
+    color: white;
+    font-size: 10pt;
+}
+
+.tableSoccerHeadRight div:nth-of-type(2) {
+    color: darkblue;
+}
+
+.tableSoccerHeadRight div:nth-of-type(3) {
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 1px;
+    height: 18px;
+}
+
+.tableSoccerHeadRight div:nth-last-of-type(1) {
+    cursor: pointer;
+    padding-left: 10px;
+    border-left: rgb(138, 130, 130) 1px solid;
+}
+
+.tableSoccerHeadRight div {
+    margin-right: 10px;
+}
+
+.tableSoccerHeadItems {
+    border-top: white 1px solid;
+    background-color: darkgreen;
+    padding: 10px 5px 5px 5px;
+}
+
+.tableSoccerHeadTitle {
+    display: flex;
+}
+
+.tableSoccerHeadTitleLeft {
+    flex: 2.8;
+    display: flex;
+    color: white;
+    font-size: 11pt;
+}
+
+.tableSoccerHeadTitleRight {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1.2;
+}
+
+.tableSoccerHeadTitleRight div {
+    margin-right: 5px;
+    font-size: 11pt;
+}
+
+.tableSoccerHeadTitleRight div:nth-of-type(1) {
+    background-color: rgb(154, 225, 154);
+    padding: 0px 3px;
+}
+
+.tableSoccerHeadTitleRight div:nth-of-type(2) {
+    color: rgb(150, 221, 247);
+}
+
+.tableSoccerHeadTitleRight div:nth-of-type(3) {
+    color: white;
+}
+
+.tableSoccerHeadTitleTeam {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    margin-top: 10px;
+    height: 70px;
+    font-size: 15pt;
+    color: white;
+}
+
+.tableSoccerHeadTitleTeam div:nth-of-type(1) {
+    flex: 3;
+    text-align: right;
+}
+
+.tableSoccerHeadTitleTeam div:nth-of-type(2) {
+    flex: 1;
+    color: rgb(97, 230, 245);
+}
+
+.tableSoccerHeadTitleTeam div:nth-of-type(3) {
+    flex: 3;
+    text-align: left;
+}
+
+.tableSoccerMyFavorite {
+    display: flex;
+    background-color: rgb(211, 234, 255);
+    line-height: 50px;
+    border-bottom: 1px solid gray;
+}
+
+.tableSoccerMyFavoriteLeft {
+    flex: 2;
+    display: flex;
+}
+
+.tableSoccerMyFavoriteLeft div:nth-of-type(1) {
+    margin: 0px 10px;
+}
+
+.tableSoccerMyFavoriteLeft img {
+    vertical-align: middle;
+    margin-bottom: 8px;
+}
+
+.tableSoccerMyFavoriteLeft div:nth-of-type(2) {
+    font-size: 1.3em;
+    font-weight: 500;
+    color: rgb(10, 153, 215);
+}
+
+.tableSoccerMyFavoriteRight {
+    margin-right: 10px;
+}
+
+.tableSoccerPopular {
+    background-color: rgba(211, 209, 209, 0.548);
+    color: rgb(10, 153, 215);
+    line-height: 50px;
+    text-align: left;
+    font-size: 1.3em;
+    font-weight: 500;
+    padding-left: 10px;
+}
+
+.tableSoccerSpreadHead,
+.tableSoccerSingleHead {
+    display: flex;
+    background-color: rgb(211, 234, 255);
+    line-height: 50px;
+    border-top: 2px solid black;
+    border-bottom: 2px solid gray;
+    color: rgb(2, 2, 100);
+}
+
+.tableSoccerSpreadHeadLeft,
+.tableSoccerSingleHeadLeft {
+    display: flex;
+    flex: 3;
+    font-size: 1.2em;
+    padding-left: 10px;
+    text-align: left;
+}
+
+.tableSoccerSpreadHeadLeft div,
+.tableSoccerSingleHeadLeft div {
+    color: rgb(10, 153, 215);
+}
+
+.tableSoccerSpreadHeadRight,
+.tableSoccerSingleHeadRight {
+    flex: 1;
+    text-align: right;
+    padding-right: 10px;
+}
+
+.tableSoccerSpread,
+.tableSoccerSingle {
+    display: flex;
+    line-height: 35px;
+    color: rgb(2, 2, 100);
+    font-size: 12pt;
+}
+
+.tableSoccerSpread div:nth-of-type(odd) {
+    display: flex;
+    border: 1px solid rgb(212, 208, 208);
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    color: black;
+    font-weight: bold;
+    line-height: 25px;
+    min-width: 36px;
+}
+
+.tableSoccerSpread div:nth-of-type(even) {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    align-items: center;
+    color: rgb(216, 3, 3);
+    font-size: 11pt;
+}
+
+.tableSoccerSpread div:empty {
+    visibility: hidden;
+}
+
+#tableSoccerSpreadTeam {
+    display: flex;
+    flex: 2;
+    border: none;
+    justify-content: flex-start;
+    align-items: center;
+    color: rgb(40, 40, 134);
+    font-weight: normal;
+}
+
+#tableSoccerOverUnder {
+    display: flex;
+    justify-content: flex-end;
+    color: gray;
+    border: none;
+    margin: 0px;
+    margin-left: -18px;
+}
+
+.tableSoccerSpreadBackgroundColor {
+    display: flex;
+    line-height: 35px;
+}
+
+#tableSoccerSpreadTeamBackgroundColor {
+    display: flex;
+    flex: 2;
+    justify-content: flex-start;
+    align-items: center;
+    border: none;
+}
+
+.tableSoccerSpreadBackgroundColorLeft {
+    display: flex;
+    flex: 3;
+    background-color: rgb(224, 238, 251);
+}
+
+.tableSoccerSpreadBackgroundColorLeft div:nth-of-type(odd) {
+    display: flex;
+    border: 1px solid rgb(212, 208, 208);
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    line-height: 25px;
+    min-width: 36px;
+}
+
+.tableSoccerSpreadBackgroundColorLeft div {
+    flex: 1;
+}
+
+.tableSoccerSpreadBackgroundColorRight {
+    display: flex;
+    flex: 3;
+}
+
+.tableSoccerSpreadBackgroundColorRight div {
+    flex: 1;
+}
+
+.tableSoccerSingleTeamLeft {
+    display: flex;
+    flex: 1.9;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px;
+}
+
+.tableSoccerSingle div div:nth-of-type(2) {
+    display: block;
+    font-weight: bold;
+    border: 1px solid gray;
+    margin: 10px;
+    padding: 0px 10px;
+    color: black;
+    line-height: 25px;
+    min-width: 30px;
+}
+
+.tableSoccerSingleTeamMiddle {
+    display: flex;
+    flex: 1.2;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px;
+    border-right: 1px dotted gray;
+    border-left: 1px dotted gray;
+}
+
+.tableSoccerSingleTeamRight {
+    display: flex;
+    flex: 1.9;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px;
+}
+
+img[src="images/star_white.svg"],
+img[src="images/nextpng.com.png"] {
+    cursor: pointer;
+}
+
+img[src="images/star-yellow.svg"],
+img[src="images/nextpng.com.png"],
+img[src="images/star_white.svg"] {
+    width: 20px;
+    height: 20px;
+}
+
+img[src="images/refresh-button.svg"] {
+    width: 18px;
+    height: 18px;
+    vertical-align: bottom;
+}

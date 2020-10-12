@@ -1,5 +1,6 @@
 html {
     background-color: darkblue;
+    overflow-y: scroll !important;
 }
 
 .mainScroll {
@@ -8,11 +9,24 @@ html {
 
 body {
     width: 73%;
+    height: 900px;
     max-width: 1032px;
-    margin: 120px auto;
+    margin: 0px auto 120px;
     background-color: white;
     font-size: 1pt;
     position: relative;
+    top: 120px;
+    padding-right: 0px !important;
+}
+
+.modal-content {
+    border-radius: 0px;
+}
+
+.close {
+    position: absolute;
+    top: 0px;
+    right: 0px;
 }
 
 .main {
@@ -29,7 +43,7 @@ body {
 
 .mainHeadLeft {
     flex: 2;
-    font-size: 10em;
+    font-size: 14px;
     background-color: rgb(50, 166, 222);
     color: white;
     line-height: 40px;
@@ -73,7 +87,7 @@ body {
 
 .mainHeadCarouselItem {
     color: rgb(50, 166, 222);
-    font-size: 12em;
+    font-size: 14px;
     position: absolute;
     top: 1px;
     left: 25px;
@@ -89,7 +103,7 @@ body {
 }
 
 .mainHeadItem ul li {
-    font-size: 11em;
+    font-size: 13px;
     color: rgb(85, 84, 84);
 }
 
@@ -150,7 +164,7 @@ body {
 
 .categoryMenu {
     color: white;
-    font-size: 12em;
+    font-size: 16px;
     font-weight: bold;
     line-height: 40px;
     padding-left: 10px;
@@ -168,9 +182,8 @@ body {
 
 .category label {
     display: block;
-    /* padding-left: 20px; */
-    line-height: 30px;
-    font-size: 12em;
+    font-size: 13px;
+    margin: 6px 0px;
     position: relative;
 }
 
@@ -197,7 +210,7 @@ body {
     flex: 1;
     background-color: rgb(40, 38, 38);
     padding: 10px 5px;
-    font-size: 10em;
+    font-size: 13px;
     color: rgb(138, 133, 133);
     text-align: center;
     border: 1px solid black;
@@ -224,7 +237,7 @@ body {
 
 .categoryMenuItem div {
     line-height: 40px;
-    font-size: 11em;
+    font-size: 13px;
     position: relative;
     color: rgb(138, 133, 133);
 }
@@ -245,8 +258,8 @@ body {
 
 .oddsTableItemSelect,
 .oddsTableItemSorts {
-    width: 1.5em;
-    height: 1.5em;
+    width: 10pt;
+    height: 10pt;
 }
 
 .oddsTableHead {
@@ -321,7 +334,7 @@ body {
 }
 
 .oddsTableKind span span:nth-of-type(1) {
-    font-size: 12em;
+    font-size: 12px;
     margin-left: 5px;
 }
 
@@ -332,7 +345,7 @@ body {
     padding: 2px 10px;
     margin-left: 10px;
     cursor: pointer;
-    font-size: 12em;
+    font-size: 12px;
 }
 
 .favAllStar {
@@ -381,10 +394,11 @@ body {
     text-align: center;
     border-bottom: 2px solid white;
     line-height: 25px;
+    font-size: 12px;
 }
 
 .oddsTableHeadGame>div:not(:first-child) {
-    font-size: 11em;
+    font-size: 12px;
 }
 
 .oddsTableScore {
@@ -404,7 +418,7 @@ body {
 .oddsTableHeadStatus {
     flex: 3.8;
     color: white;
-    font-size: 15em;
+    font-size: 16px;
     align-self: center;
     text-align: left;
 }
@@ -456,7 +470,7 @@ body {
 }
 
 .oddsTableTeam div:first-child {
-    font-size: 12em;
+    font-size: 15px;
     line-height: 35px;
     font-weight: bold;
     flex: 14;
@@ -478,7 +492,7 @@ body {
     /* flex-wrap: wrap; */
     text-align: center;
     padding-left: 10px;
-    font-size: 10em;
+    font-size: 13px;
 }
 
 .oddsTableCurrentGameTime {
@@ -502,7 +516,7 @@ body {
     display: inline;
     padding: 0px 3px;
     color: white;
-    font-size: 9pt;
+    font-size: 12px;
 }
 
 .oddsTableCurrentGameTime div:first-child {
@@ -551,20 +565,21 @@ body {
     flex: 9;
     display: flex;
     align-items: center;
-    font-size: 10em;
+    font-size: 16px;
     height: 50px;
     /* padding-bottom: 40px; */
 }
 
 .oddsTableHeadGameBasketball {
     color: rgb(130, 144, 151);
+    font-size: 12px;
 }
 
 .oddsTableHeadStatusBasketball {
     flex: 2;
     color: white;
     text-align: left;
-    font-size: 25px;
+    font-size: 16px;
 }
 
 .oddsTableSingleBasketball {
@@ -613,12 +628,13 @@ body {
     justify-content: flex-end;
     background-color: rgb(50, 166, 222);
     margin-top: -2px;
+    font-family: arial, PMingLiu, sans-serif;
 }
 
 .oddsTableTeamBasketballItem div {
     margin-left: 20px;
     color: white;
-    font-size: 10em;
+    font-size: 12px;
 }
 
 .oddsTableCurrentGameBasketball {
@@ -626,7 +642,7 @@ body {
     /* width: auto; */
     text-align: center;
     padding-left: 10px;
-    font-size: 12em;
+    font-size: 13px;
     line-height: 30px;
     border-top: 1px dotted gray;
     background-color: rgb( 255, 251, 251);
@@ -637,7 +653,7 @@ body {
     line-height: 20px;
     margin: auto;
     color: rgb(138, 138, 138);
-    font-size: 11pt;
+    font-size: 12px;
 }
 
 .oddsTableCurrentGameTimeBasketball div:first-child {
@@ -651,7 +667,8 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    color: rgb(105, 130, 171)
+    color: rgb(105, 130, 171);
+    font-size: 13px;
 }
 
 .oddsTableCurrentGameBasketball+.oddsTableCurrentGameBasketball .oddsTableCurrentTeamsBasketball div:nth-of-type(2) {
@@ -684,7 +701,7 @@ body {
     background-color: white;
     border-radius: 3px;
     line-height: 15px;
-    width: 20px;
+    width: 25px;
     position: absolute;
     top: -10px;
     right: 0px;
