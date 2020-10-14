@@ -11,14 +11,16 @@
     <title>Document</title>
     <link rel="stylesheet" href="CSS/index.css">
     <link rel="stylesheet" href="CSS/basketball.css">
-    <script src="JS/work5.js"></script>
-
+    <link rel="stylesheet" href="CSS/soccer.css">
+    <script type="module" src="JS/work5.js"></script>
+    <script src="JS/global.js"></script>
 
 </head>
 
 <body>
-    <button onclick="abc();">click</button>
-    <div id="aaa"></div>
+    <!-- <button id="abc">click</button> -->
+    <!-- <button onclick="ccc();">clickcc</button> -->
+    <!-- <div id="aaa"></div> -->
     <div class="main">
         <div class="mainScroll">
             <div class="mainHead">
@@ -56,8 +58,6 @@
                         <div class="categoryMenuItem">
 
                         </div>
-                        <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">
-                            click  </button> -->
 
                     </div>
                 </div>
@@ -113,8 +113,10 @@
     <button id="ccc" onclick="dd();">click</button> -->
     <!-- Button trigger modal -->
 
-
-    <!-- Modal -->
+    <button type="button" class="close" id="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    <!-- Modal籃球子畫面 -->
     <div class="modal fade" id="staticBackdrop" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-scrollable">
 
@@ -128,11 +130,10 @@
                         <div><img src="images/nextpng.com.png" alt=""></div>
                         <div><img src="images/refresh-button.svg" alt=""></div>
                     </div>
-                    <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                      </button> -->
+
                 </div>
                 <div class="modal-body">
+
                     <div class="tableBasketball">
                         <div class="tableBasketballHeadItems">
                             <div class="tableBasketballHeadTitle">NBA2K-Cyber NBA ALL Stars League (4x5mins)</div>
@@ -367,6 +368,228 @@
                             </div>
                         </div>
                     </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal足球子畫面 -->
+    <div class="modal fade" id="staticBackdropSoccer" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+
+            <div class="modal-content">
+                <div class="tableSoccerNav">
+                    <div class="tableSoccerHead">
+                        <div class="tableSoccerHeadLeft">滾球</div>
+                        <div class="tableSoccerHeadRight">
+                            <div>賠率:</div>
+                            <div>歐洲盤</div>
+                            <div><img src="images/nextpng.com.png" alt=""></div>
+                            <div><img src="images/refresh-button.svg" alt=""></div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button> -->
+
+                <div class="modal-body">
+                    <div class="tableSoccerScroll">
+                        <div class="tableSoccer">
+
+                            <div class="tableSoccerHeadItems">
+                                <div class="tableSoccerHeadTitle">
+                                    <div class="tableSoccerHeadTitleLeft">哈薩克斯坦甲組聯賽</div>
+                                    <div class="tableSoccerHeadTitleRight">
+                                        <div>N</div>
+                                        <div>上半場</div>
+                                        <div>45:38</div>
+                                    </div>
+                                </div>
+                                <div class="tableSoccerHeadTitleTeam">
+                                    <div>奧杜斯基克</div>
+                                    <div>1 - 1 </div>
+                                    <div>阿特勞</div>
+                                </div>
+                            </div>
+                            <div class="tableSoccerMyFavorite">
+                                <div class="tableSoccerMyFavoriteLeft">
+                                    <div><img src="images/star-yellow.svg" alt=""></div>
+                                    <div>我的盤口</div>
+                                </div>
+                                <div class="tableSoccerMyFavoriteRight">
+                                    <img src="images/nextpng.com.png" alt=""></div>
+
+                            </div>
+                            <div class="tableSoccerPopular">受歡迎的</div>
+                            <div>
+                                <div class="tableSoccerSpreadHead">
+                                    <div class="tableSoccerSpreadHeadLeft">滾球 讓球</div>
+                                    <div class="tableSoccerSpreadHeadRight"><img src="images/star_white.svg" alt=""></div>
+                                </div>
+                                <div class="tableSoccerSpread">
+                                    <div id="tableSoccerSpreadTeam">奧杜斯基克</div>
+                                    <div>+0/0.5</div>
+                                    <div>1.85</div>
+                                    <div>+0.5</div>
+                                    <div>1.57</div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <div class="tableSoccerSpread">
+                                    <div id="tableSoccerSpreadTeam">阿特勞</div>
+                                    <div>-0/0.5</div>
+                                    <div>1.99</div>
+                                    <div>-0.5</div>
+                                    <div>2.36</div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="tableSoccerSpreadHead">
+                                    <div class="tableSoccerSpreadHeadLeft">滾球 讓球-
+                                        <div>上半場</div>
+                                    </div>
+                                    <div class="tableSoccerSpreadHeadRight"><img src="images/star_white.svg" alt=""></div>
+                                </div>
+                                <div class="tableSoccerSpread">
+                                    <div id="tableSoccerSpreadTeam">奧杜斯基克</div>
+                                    <div>+0/0.5</div>
+                                    <div>1.85</div>
+                                    <div>+0.5</div>
+                                    <div>1.57</div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <div class="tableSoccerSpread">
+                                    <div id="tableSoccerSpreadTeam">阿特勞</div>
+                                    <div>-0/0.5</div>
+                                    <div>1.99</div>
+                                    <div>-0.5</div>
+                                    <div>2.36</div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="tableSoccerSpreadHead">
+                                    <div class="tableSoccerSpreadHeadLeft">進球 滾球 大/小
+                                    </div>
+                                    <div class="tableSoccerSpreadHeadRight"><img src="images/star_white.svg" alt=""></div>
+                                </div>
+                                <div class="tableSoccerSpread">
+                                    <div id="tableSoccerSpreadTeam">大</div>
+                                    <div>
+                                        <div id="tableSoccerOverUnder">O</div>+0/0.5
+                                    </div>
+                                    <div>1.85</div>
+                                    <div>
+                                        <div id="tableSoccerOverUnder">O</div>+0.5
+                                    </div>
+                                    <div>1.57</div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                                <div class="tableSoccerSpread">
+                                    <div id="tableSoccerSpreadTeam">小</div>
+                                    <div>
+                                        <div id="tableSoccerOverUnder">U</div>-0/0.5
+                                    </div>
+                                    <div>1.99</div>
+                                    <div>
+                                        <div id="tableSoccerOverUnder">U</div>-0.5
+                                    </div>
+                                    <div>2.36</div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="tableSoccerSpreadHead">
+                                    <div class="tableSoccerSpreadHeadLeft">進球 滾球 大/小-
+                                        <div>上半場</div>
+                                    </div>
+                                    <div class="tableSoccerSpreadHeadRight"><img src="images/star_white.svg" alt=""></div>
+                                </div>
+                                <div class="tableSoccerSpreadBackgroundColor">
+                                    <div class="tableSoccerSpreadBackgroundColorLeft">
+                                        <div id="tableSoccerSpreadTeamBackgroundColor">大</div>
+                                        <div></div>
+                                        <div><img src="images/pngwing.com.png" alt=""></div>
+                                    </div>
+                                    <div class="tableSoccerSpreadBackgroundColorRight">
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                    </div>
+
+                                </div>
+                                <div class="tableSoccerSpreadBackgroundColor">
+                                    <div class="tableSoccerSpreadBackgroundColorLeft">
+                                        <div id="tableSoccerSpreadTeamBackgroundColor">小</div>
+                                        <div></div>
+                                        <div><img src="images/pngwing.com.png" alt=""></div>
+                                    </div>
+                                    <div class="tableSoccerSpreadBackgroundColorRight">
+                                        <div></div>
+                                        <div></div>
+                                        <div></div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div>
+                                <div class="tableSoccerSingleHead">
+                                    <div class="tableSoccerSingleHeadLeft">滾球 獨贏
+                                    </div>
+                                    <div class="tableSoccerSingleHeadRight"><img src="images/star_white.svg" alt=""></div>
+                                </div>
+                                <div class="tableSoccerSingle">
+                                    <div class="tableSoccerSingleTeamLeft">
+                                        <div>奧杜斯基克</div>
+                                        <div>4.20</div>
+                                    </div>
+                                    <div class="tableSoccerSingleTeamMiddle">
+                                        <div>和局</div>
+                                        <div>2.20</div>
+                                    </div>
+                                    <div class="tableSoccerSingleTeamRight">
+                                        <div>阿特勞</div>
+                                        <div>2.35</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="tableSoccerSingleHead">
+                                    <div class="tableSoccerSingleHeadLeft">滾球 獨贏-
+                                        <div>上半場</div>
+                                    </div>
+                                    <div class="tableSoccerSingleHeadRight"><img src="images/star_white.svg" alt=""></div>
+                                </div>
+                                <div class="tableSoccerSingle">
+                                    <div class="tableSoccerSingleTeamLeft">
+                                        <div>奧杜斯基克</div>
+                                        <div><img src="images/pngwing.com.png" alt=""></div>
+                                    </div>
+                                    <div class="tableSoccerSingleTeamMiddle">
+                                        <div>和局</div>
+                                        <div><img src="images/pngwing.com.png" alt=""></div>
+                                    </div>
+                                    <div class="tableSoccerSingleTeamRight">
+                                        <div>阿特勞</div>
+                                        <div><img src="images/pngwing.com.png" alt=""></div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
 
             </div>

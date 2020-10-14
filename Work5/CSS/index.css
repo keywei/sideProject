@@ -1,10 +1,50 @@
 html {
-    background-color: darkblue;
+    background-image: url("../images/ce37f6286fc1ab5b2113c1b0c5b9948d.png");
     overflow-y: scroll !important;
 }
 
 .mainScroll {
-    overflow-y: scroll;
+    height: 1000px;
+}
+
+.modal-body {
+    padding: 0px;
+}
+
+.modal-backdrop {
+    position: absolute;
+    width: 785px;
+    top: 40px;
+    left: 229px;
+    background-color: white;
+}
+
+.modal-backdrop.show {
+    opacity: 0.8;
+    height: 900px;
+}
+
+
+/* .modal-backdrop.show {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+} */
+
+
+/* .modal {
+    position: relative !important;
+    z-index: 9999 !important;
+} */
+
+.close {
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    /* color: red; */
+    font-size: 50px;
+    z-index: 1041;
+    display: none;
 }
 
 body {
@@ -21,24 +61,38 @@ body {
 
 .modal-content {
     border-radius: 0px;
-}
-
-.close {
-    position: absolute;
-    top: 0px;
-    right: 0px;
+    /* position: relative; */
+    /* left: 120px;
+    top: 20px; */
+    /* width: 100%; */
 }
 
 .main {
+    overflow-y: scroll;
     height: 900px;
     display: flex;
     flex-direction: column;
     padding: 0px 5px;
 }
 
+.main::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: rgba(175, 169, 169, 0.2);
+}
+
+.main::-webkit-scrollbar {
+    width: 15px;
+}
+
+.main::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: rgba(36, 35, 35, 0.2);
+    border: 3px solid white;
+}
+
 .mainHead {
     display: flex;
-    line-height: 30px;
+    line-height: 40px;
 }
 
 .mainHeadLeft {
@@ -50,9 +104,15 @@ body {
 }
 
 .mainHeadLeft img {
-    width: 15px;
-    height: 15px;
+    margin-right: 2px;
     vertical-align: middle;
+}
+
+.mainHeadLeft img:nth-of-type(1) {
+    vertical-align: middle;
+    width: 16px;
+    height: 16px;
+    margin-right: 0px;
 }
 
 .mainHeadLeft div {
@@ -79,7 +139,7 @@ body {
 
 .mainHeadRight img {
     position: absolute;
-    top: 5px;
+    top: 15px;
     width: 20px;
     height: 20px;
     vertical-align: middle;
@@ -89,7 +149,7 @@ body {
     color: rgb(50, 166, 222);
     font-size: 14px;
     position: absolute;
-    top: 1px;
+    top: 5px;
     left: 25px;
     white-space: nowrap;
 }
@@ -183,8 +243,9 @@ body {
 .category label {
     display: block;
     font-size: 13px;
-    margin: 6px 0px;
+    margin: 12px 0px;
     position: relative;
+    color: rgb(138, 133, 133);
 }
 
 #category input {
@@ -553,11 +614,12 @@ body {
     background-color: white;
     border-radius: 3px;
     line-height: 13px;
-    width: 20px;
+    width: 23px;
     position: absolute;
     top: 2px;
     right: 0px;
     color: black;
+    cursor: pointer;
 }
 
 .oddsTableHeadGameBasketball {

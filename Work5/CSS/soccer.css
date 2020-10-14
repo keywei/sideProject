@@ -1,12 +1,22 @@
 body {
-    width: 100%;
-    overflow-y: hidden;
+    /* width: 540px; */
+    /* overflow-y: hidden; */
     overflow-x: hidden;
-    background-color: rgba(255, 255, 255, 0.5);
+    /* background-color: rgba(255, 255, 255, 0.5); */
+}
+
+#staticBackdropSoccer {
+    position: absolute;
+    top: 15px;
+    left: 340px;
+    right: 0px;
+    width: 540px;
+    padding: 0px !important;
+    margin: 0px;
 }
 
 .tableSoccerNav {
-    width: 70%;
+    width: 100%;
     text-align: center;
     margin: 0px auto;
     border: 1px solid gray;
@@ -19,10 +29,10 @@ body {
 }
 
 .tableSoccer {
-    height: 800px;
-    width: 70%;
+    /* height: 800px; */
+    width: 100%;
     text-align: center;
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
     margin: 0px auto;
     border: 1px solid gray;
     background-color: white;
@@ -38,7 +48,7 @@ body {
     flex: 1;
     display: flex;
     align-self: flex-start;
-    font-size: 1.3em;
+    font-size: 18px;
     color: white;
     font-weight: bold;
     padding-left: 10px;
@@ -50,7 +60,7 @@ body {
     align-items: center;
     flex: 1;
     color: white;
-    font-size: 10pt;
+    font-size: 12px;
 }
 
 .tableSoccerHeadRight div:nth-of-type(2) {
@@ -88,7 +98,7 @@ body {
     flex: 2.8;
     display: flex;
     color: white;
-    font-size: 11pt;
+    font-size: 12px;
 }
 
 .tableSoccerHeadTitleRight {
@@ -99,7 +109,6 @@ body {
 
 .tableSoccerHeadTitleRight div {
     margin-right: 5px;
-    font-size: 11pt;
 }
 
 .tableSoccerHeadTitleRight div:nth-of-type(1) {
@@ -109,10 +118,12 @@ body {
 
 .tableSoccerHeadTitleRight div:nth-of-type(2) {
     color: rgb(150, 221, 247);
+    font-size: 13px;
 }
 
 .tableSoccerHeadTitleRight div:nth-of-type(3) {
     color: white;
+    font-size: 12px;
 }
 
 .tableSoccerHeadTitleTeam {
@@ -121,8 +132,8 @@ body {
     align-items: center;
     background-color: rgba(0, 0, 0, 0.6);
     margin-top: 10px;
-    height: 70px;
-    font-size: 15pt;
+    height: 60px;
+    font-size: 15px;
     color: white;
 }
 
@@ -134,6 +145,7 @@ body {
 .tableSoccerHeadTitleTeam div:nth-of-type(2) {
     flex: 1;
     color: rgb(97, 230, 245);
+    font-size: 18px;
 }
 
 .tableSoccerHeadTitleTeam div:nth-of-type(3) {
@@ -163,7 +175,7 @@ body {
 }
 
 .tableSoccerMyFavoriteLeft div:nth-of-type(2) {
-    font-size: 1.3em;
+    font-size: 18px;
     font-weight: 500;
     color: rgb(10, 153, 215);
 }
@@ -177,7 +189,7 @@ body {
     color: rgb(10, 153, 215);
     line-height: 50px;
     text-align: left;
-    font-size: 1.3em;
+    font-size: 15px;
     font-weight: 500;
     padding-left: 10px;
 }
@@ -196,7 +208,7 @@ body {
 .tableSoccerSingleHeadLeft {
     display: flex;
     flex: 3;
-    font-size: 1.2em;
+    font-size: 15px;
     padding-left: 10px;
     text-align: left;
 }
@@ -218,7 +230,7 @@ body {
     display: flex;
     line-height: 35px;
     color: rgb(2, 2, 100);
-    font-size: 12pt;
+    font-size: 13px;
 }
 
 .tableSoccerSpread div:nth-of-type(odd) {
@@ -231,7 +243,6 @@ body {
     color: black;
     font-weight: bold;
     line-height: 25px;
-    min-width: 36px;
 }
 
 .tableSoccerSpread div:nth-of-type(even) {
@@ -240,7 +251,6 @@ body {
     justify-content: flex-end;
     align-items: center;
     color: rgb(216, 3, 3);
-    font-size: 11pt;
 }
 
 .tableSoccerSpread div:empty {
@@ -259,11 +269,10 @@ body {
 
 #tableSoccerOverUnder {
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     color: gray;
     border: none;
-    margin: 0px;
-    margin-left: -18px;
+    /* margin-left: -18px; */
 }
 
 .tableSoccerSpreadBackgroundColor {
@@ -352,8 +361,7 @@ img[src="images/nextpng.com.png"] {
 }
 
 img[src="images/star-yellow.svg"],
-img[src="images/nextpng.com.png"],
-img[src="images/star_white.svg"] {
+img[src="images/nextpng.com.png"] {
     width: 20px;
     height: 20px;
 }
