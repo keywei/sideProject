@@ -46,41 +46,69 @@ window.onload = function() {
         }
         // 動態時間
         window.autoTime = function() {
-                setInterval(function() {
-                    var time = new Date()
-                    var oddsTableCurrentGameTime = document.getElementsByClassName("oddsTableCurrentGameTime");
-                    var oddsTableCurrentGameTimeBasketball = document.getElementsByClassName("oddsTableCurrentGameTimeBasketball")
-                        // var a = oddsTableCurrentGameTime[0].getElementsByTagName("div")[2].innerText.split(":")
-                    for (let i = 0; i < oddsTableCurrentGameTime.length; i++) {
-                        datas[i].time[2] = (time.getMinutes() < 10 ? '0' : '') + time.getMinutes() + ":" + (time.getSeconds() < 10 ? '0' : '') + time.getSeconds()
-                        if (oddsTableCurrentGameTime[i].getElementsByTagName("div")[2] != "&ensp;" &&
-                            oddsTableCurrentGameTime[i].getElementsByTagName("div")[2] != undefined) {
-                            oddsTableCurrentGameTime[i].getElementsByTagName("div")[2].innerHTML =
-                                (time.getMinutes() < 10 ? '0' : '') + time.getMinutes() + ":" + (time.getSeconds() < 10 ? '0' : '') + time.getSeconds()
 
+            setInterval(function() {
+                var time = new Date()
 
+                var oddsTableCurrentGameTime = document.getElementsByClassName("oddsTableCurrentGameTime");
+                var oddsTableCurrentGameTimeBasketball = document.getElementsByClassName("oddsTableCurrentGameTimeBasketball")
+                    // var a = oddsTableCurrentGameTime[0].getElementsByTagName("div")[2].innerText.split(":")
+                for (let i = 0; i < oddsTableCurrentGameTime.length; i++) {
+                    if (oddsTableCurrentGameTime[i].getElementsByTagName("div")[2] != "&ensp;" &&
+                        oddsTableCurrentGameTime[i].getElementsByTagName("div")[2] != undefined) {
+                        for (let y = 0; y < datas.length; y++) {
+                            if (oddsTableCurrentGameTime[i].getElementsByTagName("div")[2].getAttribute("value") == datas[y].id) {
+                                let dataTime = datas[y].time[2].split(":")
+                                var upDataTimeSeconds = (parseInt(dataTime[1]) + 1) % 60
+                                var upDataTimeMinutes = (parseInt(dataTime[0]) + Math.floor((parseInt(dataTime[1]) + 1) / 60)) % 60
+                                oddsTableCurrentGameTime[i].getElementsByTagName("div")[2].innerHTML = (upDataTimeMinutes < 10 ? '0' : '') + upDataTimeMinutes + ":" + (upDataTimeSeconds < 10 ? '0' : '') + upDataTimeSeconds
+                                datas[y].time[2] = (upDataTimeMinutes < 10 ? '0' : '') + upDataTimeMinutes + ":" + (upDataTimeSeconds < 10 ? '0' : '') + upDataTimeSeconds
+                            }
                         }
                     }
-                    for (let y = 0; y < oddsTableCurrentGameTimeBasketball.length; y++) {
-                        datas[6 + y].time[2] = (time.getMinutes() < 10 ? '0' : '') + time.getMinutes() + ":" + (time.getSeconds() < 10 ? '0' : '') + time.getSeconds()
-                        if (oddsTableCurrentGameTimeBasketball[y].getElementsByTagName("div")[2] != "&ensp;" &&
-                            oddsTableCurrentGameTimeBasketball[y].getElementsByTagName("div")[2] != undefined) {
-                            oddsTableCurrentGameTimeBasketball[y].getElementsByTagName("div")[2].innerHTML = (time.getMinutes() < 10 ? '0' : '') + time.getMinutes() + ":" + (time.getSeconds() < 10 ? '0' : '') + time.getSeconds()
+                    // console.log(upDataTimeSeconds)
+                    // let dataTimeSeconds = [parseInt(dataTime[0] + 1) + ":" 
+                    // console.log(dataTimeSeconds)
+                    // console.log(dataTimeSeconds)
+                    // let nowMinutes = time.getMinutes() * 60 + time.getSeconds() + dataTimeSeconds
+                    // console.log(nowMinutes)
+                    // let upDataTimeSeconds = nowMinutes % 60
+                    // let upDataTimeMinutes = Math.floor(nowMinutes / 60)
+                    // datas[i].time[2] = (upDataTimeMinutes < 10 ? '0' : '') + upDataTimeMinutes + ":" + (upDataTimeSeconds < 10 ? '0' : '') + upDataTimeSeconds
+
+                }
+                for (let i = 0; i < oddsTableCurrentGameTimeBasketball.length; i++) {
+                    if (oddsTableCurrentGameTimeBasketball[i].getElementsByTagName("div")[2] != "&ensp;" &&
+                        oddsTableCurrentGameTimeBasketball[i].getElementsByTagName("div")[2] != undefined) {
+                        for (let z = 0; z < datas.length; z++) {
+                            if (oddsTableCurrentGameTimeBasketball[i].getElementsByTagName("div")[2].getAttribute("value") == datas[z].id) {
+                                let dataTime = datas[z].time[2].split(":")
+                                let upDataTimeSeconds = (parseInt(dataTime[1]) + 1) % 60
+                                let upDataTimeMinutes = (parseInt(dataTime[0]) + Math.floor(upDataTimeSeconds / 60)) % 60
+                                oddsTableCurrentGameTimeBasketball[i].getElementsByTagName("div")[2].innerHTML = (upDataTimeMinutes < 10 ? '0' : '') + upDataTimeMinutes + ":" + (upDataTimeSeconds < 10 ? '0' : '') + upDataTimeSeconds
+                                datas[z].time[2] = (upDataTimeMinutes < 10 ? '0' : '') + upDataTimeMinutes + ":" + (upDataTimeSeconds < 10 ? '0' : '') + upDataTimeSeconds
+                            }
                         }
                     }
-                }, 1000)
 
-            }
-            // autoTime()
+                }
+            }, 1000)
+
+        }
+
+        autoTime()
+
+
         var timeSortOptionBtn = document.getElementById("timeSortOption")
 
         window.timeSortSelect = function() {
-                timeSortBoolean = timeSortOptionBtn.value == "true" ? true : false
-                timeSort()
-                renderStar(categorySelect)
+            timeSortBoolean = timeSortOptionBtn.value == "true" ? true : false
+            timeSort()
+            renderStar(categorySelect)
 
-            }
-            // 時間排序
+        }
+
+        // 時間排序
         window.timeSort = function() {
             if (timeSortBoolean) {
                 datas.sort(function(a, b) {
@@ -315,7 +343,7 @@ window.onload = function() {
             <div class="oddsTableCurrentGameTimeBasketball">
                 <div>${data.time[0]}</div>
                 <div>${data.time[1]}</div>
-                <div>${data.time[2]}</div>
+                <div  value="${data.id}">${data.time[2]}</div>
             </div>
             <div class="oddsTableCurrentTeamsBasketball">
                 <div>${data.team[0]}</div>
@@ -363,7 +391,7 @@ window.onload = function() {
             <div class="oddsTableCurrentGameTimeBasketball">
                 <div>${data.time[0]}</div>
                 <div>${data.time[1]}</div>
-                <div>${data.time[2]}</div>
+                <div  value="${data.id}">${data.time[2]}</div>
             </div>
             <div class="oddsTableCurrentTeamsBasketball">
                 <div>${data.twoteam[0]}</div>
@@ -433,19 +461,19 @@ window.onload = function() {
 
                 let html = ""
                 let favAllStar = `<span class="favAll" onclick="isGameAllCategory()">全部</span>
-    <span class="favAllStar" onclick="renderFavorite()"><img src="images/star.svg" alt=""><span>${favoriteDatas.length}</span></span>`
+            <span class="favAllStar" onclick="renderFavorite()"><img src="images/star.svg" alt=""><span>${favoriteDatas.length}</span></span>`
                 oddsTableKind.innerHTML = favAllStar
                 Object.keys(groupByCategoryAndgameHead).forEach(function(category) {
                     if (category == "soccer") {
                         addTitleSoccer()
                         Object.keys(groupByCategoryAndgameHead[category]).forEach(function(gameHead) {
                             html += `<div class="oddsTableScoreKind">
-            <div class="oddsTableTeam">
-            <div>${gameHead}</div>
-            <div><img src="${isGameAllInFavorite(groupByCategoryAndgameHead[category][gameHead][0].game_id) ? 'images/star.svg' : 'images/star_white.svg'}"
-            onclick="switchFavoriteByGame('${groupByCategoryAndgameHead[category][gameHead][0].game_id}')"></div>
-            </div>
-            `
+                                <div class="oddsTableTeam">
+                                <div>${gameHead}</div>
+                                <div><img src="${isGameAllInFavorite(groupByCategoryAndgameHead[category][gameHead][0].game_id) ? 'images/star.svg' : 'images/star_white.svg'}"
+                                onclick="switchFavoriteByGame('${groupByCategoryAndgameHead[category][gameHead][0].game_id}')"></div>
+                                </div>
+                                `
                             groupByCategoryAndgameHead[category][gameHead].forEach(function(data) {
 
 
@@ -459,7 +487,7 @@ window.onload = function() {
                 <div class="oddsTableCurrentGameTime">
                         <div>${data.time[0]}</div>
                         <div>${data.time[1]}</div>
-                        <div>${data.time[2]}</div>
+                        <div value="${data.id}">${data.time[2]}</div>
                         ${data.time[3]!="&ensp;"?"<div>"+data.time[3]+"</div>":''}
                         </div>
                 <div class="oddsTableCurrentTeams">
@@ -469,8 +497,8 @@ window.onload = function() {
                 </div>
                 <div class="oddsTableSingle">
                         <div class="${changeColorBoolean?(dataSingle==data.single[0]?'backgroundRed':data.single[0]!="&ensp;"?'backgroundGreen':''):""}">${data.single[0]}</div>
-                        <div class="${changeColorBoolean?(dataSingle==data.single[1]?'backgroundRed':data.single[0]!="&ensp;"?'backgroundGreen':''):""}">${data.single[0]}</div>
-                        <div class="${changeColorBoolean?(dataSingle==data.single[2]?'backgroundRed':data.single[0]!="&ensp;"?'backgroundGreen':''):""}">${data.single[0]}</div>
+                        <div class="${changeColorBoolean?(dataSingle==data.single[1]?'backgroundRed':data.single[1]!="&ensp;"?'backgroundGreen':''):""}">${data.single[1]}</div>
+                        <div class="${changeColorBoolean?(dataSingle==data.single[2]?'backgroundRed':data.single[2]!="&ensp;"?'backgroundGreen':''):""}">${data.single[2]}</div>
                         
                 </div>
                 <div class="oddsTableScore">
@@ -609,7 +637,7 @@ window.onload = function() {
                     <div class="oddsTableCurrentGameTimeBasketball">
                         <div>${data.time[0]}</div>
                         <div>${data.time[1]}</div>
-                        <div>${data.time[2]}</div>
+                        <div value="${data.id}">${data.time[2]}</div>
                     </div>
                     <div class="oddsTableCurrentTeamsBasketball">
                         <div>${data.team[0]}</div>
@@ -657,7 +685,7 @@ window.onload = function() {
                     <div class="oddsTableCurrentGameTimeBasketball">
                         <div>${data.time[0]}</div>
                         <div>${data.time[1]}</div>
-                        <div>${data.time[2]}</div>
+                        <div value="${data.id}">${data.time[2]}</div>
                     </div>
                     <div class="oddsTableCurrentTeamsBasketball">
                         <div>${data.twoteam[0]}</div>
@@ -708,7 +736,8 @@ window.onload = function() {
             }
             // 標題星星判斷(亮不亮燈)
         const isGameAllInFavorite = function(game_id) {
-                return datas.filter(function(x) { return x.game_id == game_id }).every(function(x) { return x.myFavorite })
+                return datas.filter(function(x) { return x.game_id == game_id })
+                    .every(function(x) { return x.myFavorite })
 
             }
             // 標題星星
@@ -756,7 +785,6 @@ window.onload = function() {
 
                     } else if (x.id == "category2" && x.checked == true) {
                         categorySelect = "basketball"
-                        console.log(categorySelect)
                         renderStar(categorySelect)
 
                     }
