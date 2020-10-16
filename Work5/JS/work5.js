@@ -82,19 +82,15 @@ window.onload = function() {
             }
             // 時間排序
         window.timeSort = function() {
-            console.log(timeSortBoolean)
             if (timeSortBoolean) {
                 datas.sort(function(a, b) {
                     return parseInt(a.time[2]) - parseInt(b.time[2])
                 })
-                console.log("aa")
-                console.log(datas)
             } else {
                 datas.sort(function(a, b) {
                     return a.id - b.id
                 })
-                console.log("bb")
-                console.log(datas)
+
 
             }
         }
@@ -110,7 +106,6 @@ window.onload = function() {
         var timeSortBoolean = false
             // 全部類別渲染頁面    
         const renderStar = function(select) {
-            console.log(select)
             clearTimeout(changeColorTimeoutFavorite)
             clearInterval(changeColorIntervalFavorite)
             if (!openTime) {
@@ -122,7 +117,6 @@ window.onload = function() {
             const favoriteDatas = datas.filter(function(x) { return x.myFavorite })
             oddsTableHeadGameTitle.innerHTML = ""
             let groupByCategory = datas.groupBy("category")
-            console.log(groupByCategory)
             let selectByCategory = Object.keys(groupByCategory).reduce(function(result, category) {
                 if (category == select) {
                     result[category] = groupByCategory[category].groupBy("gameHead")
@@ -137,7 +131,6 @@ window.onload = function() {
                         return result
                     }, {})
             } else { groupByCategoryAndgameHead = selectByCategory }
-            console.log(groupByCategoryAndgameHead)
 
             let html = ""
             let favAllStar = `<span class="favAll" onclick="isGameAllCategory()">全部</span>
