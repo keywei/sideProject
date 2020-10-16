@@ -18,7 +18,7 @@
 </head>
 
 <body>
-    <!-- <button id="abc">click</button> -->
+    <!-- <button id="abc" onclick="abc()">click</button> -->
     <!-- <button onclick="ccc();">clickcc</button> -->
     <!-- <div id="aaa"></div> -->
     <div class="main">
@@ -65,8 +65,7 @@
                 <div class="oddsTable">
                     <div class="oddsTableHead">
                         <div class="oddsTableKind">
-                            <span class="favAll">全部</span>
-                            <span class="favAllStar"><img src="images/star.svg" alt=""><span>0</span></span>
+
                         </div>
                         <div class="oddsTableItems">
                             <div>
@@ -85,9 +84,9 @@
                             </div>
                             <div>單線盤口顯示</div>
                             <div>
-                                <select class="oddsTableItemSorts " name=" " id=" ">
-                                <option value=" ">歐洲盤</option>
-                                <option value=" ">香港盤</option>
+                                <select class="oddsTableItemSorts " name=" " id="timeSortOption" onchange="timeSortSelect()">
+                                <option value="false">按聯賽排序</option>
+                                <option value="true">按時間排序</option>
                            </select>
                                 <img src="images/awards+certificate+champion+cup+resume+winner+icon-1320190709133183386_0.svg ">
                             </div>
@@ -121,7 +120,6 @@
         <div class="modal-dialog modal-lg modal-dialog-scrollable">
 
             <div class="modal-content">
-
                 <div class="tableBasketballHead">
                     <div class="tableBasketballHeadLeft">滾球</div>
                     <div class="tableBasketballHeadRight">

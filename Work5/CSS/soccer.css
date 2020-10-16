@@ -355,7 +355,9 @@ body {
     padding: 0px 10px;
 }
 
-img[src="images/star_white.svg"],
+
+/* img[src="images/star_white.svg"], */
+
 img[src="images/nextpng.com.png"] {
     cursor: pointer;
 }

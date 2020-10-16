@@ -14,35 +14,41 @@ export var categoryMenuMorning = ["獨贏盤(半場＆全場)", "讓球＆大小
 export var categoryMenuPass = ["入場數-雙/單", "讓球＆大小盤", "獨贏盤(半場＆全場)", "總入球", "半場/全場", "波胆", "最先/最後進球", "冠軍"];
 export var categoryMenuItems = [categoryMenuToday, categoryMenuMorning, categoryMenuPass];
 export var soccer = [{
+    "id": 1,
     "gameHead": "哈薩克斯坦甲組聯賽",
     "time": ["1-1", "上半場", "45:24", "N"],
     "team": ["奧杜斯基克", "阿特勞", "和局"],
-    "modal": "7",
+    "modal": "9",
     "single": ["4.20", "2.35", "2.20"],
     "spreadScore": ["", "0/0.5", ""],
     "spread": ["1.87", "1.97", ""],
     "overUnderScore": ["3", "", ""],
     "overUnder": ["1,82", "2.00", ""],
-    "secondHalfSingle": ["", "", ""],
+    "secondHalfSingle": ["<img src='images/pngwing.com.png'>", "<img src='images/pngwing.com.png'>", "<img src='images/pngwing.com.png'>"],
     "secondHalfSpreadScore": ["", "", ""],
-    "secondHalfSpread": ["", "", ""],
+    "secondHalfSpread": ["<img src='images/pngwing.com.png'>", "<img src='images/pngwing.com.png'>", ""],
     "secondHalfOverUnderScore": ["2.5", "", ""],
-    "secondHalfOverUnder": ["", "", ""],
-    "downSingle": ["4.20", "2.35"],
-    "downSpreadScore": ["", "0/0.5"],
-    "downSpread": ["1.87", "1.97"],
-    "downOverUnderScore": ["3", ""],
-    "downOverUnder": ["1.82", "2.00"],
+    "secondHalfOverUnder": ["<img src='images/pngwing.com.png'>", "<img src='images/pngwing.com.png'>", ""],
+    "myFavorite": true,
+    "downId": 2,
+    "downSingle": ["", ""],
+    "downSpreadScore": ["", "0.5"],
+    "downSpread": ["1.57", "2.36"],
+    "downOverUnderScore": ["3/3.5", ""],
+    "downOverUnder": ["2.26", "1.61"],
     "downSecondHalfSingle": ["", ""],
-    "downSecondHalfSpreadScore": ["", ""],
-    "downSecondHalfSpread": ["", ""],
-    "downSecondHalfOverUnderScore": ["2.5", ""],
-    "downSecondHalfOverUnder": ["", ""]
+    "downSecondHalfSpreadScore": ["", "0/0.5"],
+    "downSecondHalfSpread": ["<img src='images/pngwing.com.png'>", "<img src='images/pngwing.com.png'>"],
+    "downSecondHalfOverUnderScore": ["", ""],
+    "downSecondHalfOverUnder": ["", ""],
+    "MyFavorite": false
+
 }, {
+    "id": 3,
     "gameHead": "電競足球-FIFA20 CLA德國盃-10分鐘比賽",
     "time": ["2-1", "上半場", "03:41", ""],
     "team": ["Bayern Munich (Praym) Esports", "Rb Leipzig (Dimqaa) Esports", "和局"],
-    "modal": "12",
+    "modal": "11",
     "single": ["4.35", "1.62", "3.30"],
     "spreadScore": ["0/0.5", "", ""],
     "spread": ["1.84", "1.86", ""],
@@ -53,6 +59,8 @@ export var soccer = [{
     "secondHalfSpread": ["1.56", "2.16", ""],
     "secondHalfOverUnderScore": ["1.5", "", ""],
     "secondHalfOverUnder": ["2.14", "1.57", ""],
+    "myFavorite": false,
+    "downId": 4,
     "downSingle": ["", ""],
     "downSpreadScore": ["0.5", ""],
     "downSpread": ["2.07", "1.63"],
@@ -62,8 +70,10 @@ export var soccer = [{
     "downSecondHalfSpreadScore": ["0/0.5", ""],
     "downSecondHalfSpread": ["2.58", "1.33"],
     "downSecondHalfOverUnderScore": ["1.5/2", ""],
-    "downSecondHalfOverUnder": ["2.72", "1.28"]
+    "downSecondHalfOverUnder": ["2.72", "1.28"],
+    "MyFavorite": false
 }, {
+    "id": 5,
     "gameHead": "電競足球-決戰-8分鐘比賽",
     "time": ["0-1", "上半場", "03:55", ""],
     "team": ["Sevilla(Blulevard Prospect)", "Barcelona(DangerDim77) Esports", "和局"],
@@ -73,11 +83,13 @@ export var soccer = [{
     "spread": ["1.79", "1.91", ""],
     "overUnderScore": ["1.52/2", "", ""],
     "overUnder": ["1,78", "1,92", ""],
-    "secondHalfSingle": ["", "", ""],
+    "secondHalfSingle": ["<img src='images/pngwing.com.png'>", "<img src='images/pngwing.com.png'>", "<img src='images/pngwing.com.png'>"],
     "secondHalfSpreadScore": ["", "", ""],
-    "secondHalfSpread": ["", "", ""],
+    "secondHalfSpread": ["<img src='images/pngwing.com.png'>", "<img src='images/pngwing.com.png'>", ""],
     "secondHalfOverUnderScore": ["1.5", "", ""],
-    "secondHalfOverUnder": ["", "", ""],
+    "secondHalfOverUnder": ["<img src='images/pngwing.com.png'>", "<img src='images/pngwing.com.png'>", ""],
+    "myFavorite": false,
+    "downId": 6,
     "downSingle": ["", ""],
     "downSpreadScore": ["0/0.5", ""],
     "downSpread": ["2.38", "1.42"],
@@ -87,9 +99,12 @@ export var soccer = [{
     "downSecondHalfSpreadScore": ["", ""],
     "downSecondHalfSpread": ["", ""],
     "downSecondHalfOverUnderScore": ["", ""],
-    "downSecondHalfOverUnder": ["", ""]
+    "downSecondHalfOverUnder": ["", ""],
+    "MyFavorite": false
+
 }]
 export var basketball = [{
+    "id": 7,
     "gameHead": "NBA2K-CYBER NBA ALL STARS LEAGUE(4X5MINS)",
     "time": ["18-21", "第二節", "02:06"],
     "team": ["休斯敦火箭 (SLAMDUNKVV)", "丹佛掘金 (HURRICANE)"],
@@ -101,9 +116,11 @@ export var basketball = [{
         ["大", "115.5"],
         ["小", "115.5"]
     ],
+    "myFavorite": true,
     "overUnder": ["", ""],
     "TeamOverUnderScore": ["", ""],
     "TeamOverUnder": ["", ""],
+    "downId": 8,
     "twotime": ["17-21", "第二節", "03:30"],
     "twoteam": ["雅特蘭大老鷹 (MVP)", "金州勇士 (Shiva)"],
     "twomodal": "12",
@@ -116,12 +133,14 @@ export var basketball = [{
     ],
     "twooverUnder": ["1.80", "1.80"],
     "twoTeamOverUnderScore": ["", ""],
-    "twoTeamOverUnder": ["", ""]
+    "twoTeamOverUnder": ["", ""],
+    "MyFavorite": false
+
 }]
 export var category = [
-    ['所有體育項目', "allGame"],
-    ['足球', soccer],
-    ['籃球', basketball],
+    ['所有體育項目', "allGame", "allGame"],
+    ['足球', soccer, "soccer"],
+    ['籃球', basketball, "basketball"],
     ['網球', "tennis"],
     ['乒乓球', "tableTennis"],
     ['電子競技', "Streaming"],
