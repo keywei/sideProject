@@ -1,6 +1,6 @@
 // export
-import { speaker, categoryMenuItems, soccer, basketball, category } from '../database.js';
-import { datas } from '../datas.js';
+// import { speaker, categoryMenuItems, soccer, basketball, category } from '../database.js';
+import { datas, categoryMenuItems, speaker, category } from '../config/datas.js';
 
 window.onload = function() {
 
@@ -48,7 +48,6 @@ window.onload = function() {
         window.autoTime = function() {
 
             setInterval(function() {
-                var time = new Date()
 
                 var oddsTableCurrentGameTime = document.getElementsByClassName("oddsTableCurrentGameTime");
                 var oddsTableCurrentGameTimeBasketball = document.getElementsByClassName("oddsTableCurrentGameTimeBasketball")
@@ -800,7 +799,10 @@ window.onload = function() {
         // ensp(soccer)
         // ensp(basketball)
         ensp(datas)
-        var nber = [soccer.length, basketball.length, 2, 3, 4, 5, 6];
+        const categoryLength = datas.groupBy("category")
+        console.log(categoryLength)
+        var nber = [categoryLength.soccer.length, categoryLength.basketball.length, 2, 3, 4, 5, 6];
+
 
 
         var categoryMenuItemsActive = document.getElementsByClassName("categoryMenuItems");
