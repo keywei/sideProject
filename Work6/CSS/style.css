@@ -212,7 +212,6 @@ body,input {
     background-color:#FFFE00 ;
 }
 .news {
-    width: 100%;
     height: 36px;
     background: url('../image/news_bg_x.jpg');
 }
@@ -270,35 +269,25 @@ body,input {
     height: 205px;
     width: 174px;
 }
-.btn-box-margin {
+.btn-box-wh-margin {
+    float: left;
+    width: 81px;
+    height: 95px;
     margin: 3px 3px;
 }
 .btn-bbin {
-    float: left;
-    width: 81px;
-    height: 95px;
     background: url('../image/lang/zh-cn/liveicon_01.png');
 }
 .btn-live-ag {
-    float: left;
-    width: 81px;
-    height: 95px;
     background: url('../image/lang/zh-cn/liveicon_02.png');
 }
  .btn-mg {
-    float: left;
-    width: 81px;
-    height: 95px;
     background: url('../image/lang/zh-cn/liveicon_03.png');
  }
  .btn-live-allbet {
-    float: left;
-    width: 81px;
-    height: 95px;
     background: url('../image/lang/zh-cn/liveicon_04.png');
  }
- .btn-live-play,
- .btn-electronic-play {
+ .btn-casino-play {
      float: left;
      width: 160px;
      height: 54px;
@@ -307,15 +296,9 @@ body,input {
  }
 
 .btn-electronic-fg {
-    float: left;
-    width: 81px;
-    height: 95px;
     background: url('../image/lang/zh-cn/casinoicon_03.png');
 }
 .btn-electronic-jdb {
-    float: left;
-    width: 81px;
-    height: 95px;
     background: url('../image/lang/zh-cn/casinoicon_04.png');
 }
 
@@ -413,8 +396,10 @@ body,input {
 }
 .footer {
     width: 1070px;
-    padding: 26px 0 0 0;
-    margin: 0 auto 50px auto ;
+    margin: 0 auto ;
+}
+.footer>div {
+    margin: 26px 5px;
 }
 .footer-img-ublogo {
     float: left;
@@ -422,11 +407,11 @@ body,input {
     height: 48px;
     background:url('../image/ublogo.png') no-repeat center;
 }
-.footer-img-bbin {
+.footer .footer-img-bbin {
     float: left;
     width: 89px;
     height: 35px;
-    margin: 5px 0 0 16px;
+    margin: 30px 0 0 10px;
     background: url('../image/red.png') no-repeat center;
     background-size: contain;
 }
@@ -439,7 +424,7 @@ body,input {
 .footer-box {
     width: 1070px;
     color: #FFF;
-    margin: 0 auto;
+    margin: 26px auto;
 }
 .footer-connect {
     margin: 0 0 10px 0;
