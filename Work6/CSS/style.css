@@ -2,17 +2,14 @@ body,input {
     margin: 0;
     padding: 0;
 }
-.body-bg{
+.body-bg {
     width: 100%;
     min-width: 1070px;
 }
-
-
 .header-bg {
     width: 100%;
     background: url('../image/nav_bg.jpg') no-repeat center top;
 }
-
 .main {
     width: 1070px;
     margin: 0 auto;
@@ -21,32 +18,26 @@ body,input {
     width: 100%;
     font-size: 12px;
 }
-
 .nav-top-items {
     float:right;
     line-height: 32px;
     font-size: 12px;
     color: white;
 }
-
 .nav-top-items>div {
     float: left;
     margin: 0 0 0 9px;
     font-size: 12px;
 }
-
 .nav-top-item-2 {
     color: #00FF0B;
 }
-
 .nav-top-item-4 {
     color: #00FFA7;
 }
-
 .nav-top-item-5 {
     color: #EFF800;
 }
-
 .nav-top-items div:nth-of-type(odd):hover {
     cursor: pointer;
     color: #FFDE00;
@@ -61,7 +52,6 @@ body,input {
     height: 20px;
     margin: 0 0 0 3px;
     background: url('../image/lang_rect_c.png') no-repeat;
-
 }
 .flag .nav-top-item-cn {
     float: left;
@@ -69,9 +59,7 @@ body,input {
     height: 20px;
     margin: 0 0 0 3px;
     background: url('../image/lang_rect_c.png') no-repeat 0px -40px;
-
 }
-
 .flag .nav-top-item-en {
     float: left;
     width: 22px;
@@ -82,8 +70,6 @@ body,input {
 .logo {
     float: left;
 }
-
-
 .login {
     float: right;
     margin: 30px 0 0 0;
@@ -114,7 +100,6 @@ body,input {
     background: url('../image/lang/zh-cn/btn_joinus.png') no-repeat center bottom;
 
 }
-
 .btn-forget {
     float: left;
     margin: 5px 0 0 0;
@@ -125,7 +110,6 @@ body,input {
 .btn-forget:hover {
     color: #D90000;
 }
-
 .input-account {
     float: left;
     height: 28px;
@@ -135,8 +119,6 @@ body,input {
     border-style: none;
     background: url('../image/input_bg01.png')no-repeat center center;
 }
-
-
 .input-password {
     float: left;
     height: 28px;
@@ -146,7 +128,7 @@ body,input {
     border-style: none;
     background: url('../image/input_bg02.png')no-repeat center 10%;
 }
-.header-bottom>div{
+.header-bottom>div {
     float: left;
     padding: 0 0 0 35px;
     margin: 10px;
@@ -155,7 +137,7 @@ body,input {
     color: #FFF;
     text-decoration: none;
 }
-.header-bottom-promotions>a{
+.header-bottom-promotions>a {
     color: #FF0000;
 }
 .clearfix:after{
@@ -166,16 +148,15 @@ body,input {
 .clearfix {
     overflow:auto;
 }
-
-.header-bottom-hover:hover,.header-bottom-hover:hover a
-{
+.header-bottom-hover:hover,
+.header-bottom-hover:hover a {
     background-position: left bottom;
     color: #FFF000;
 }
 .header-bottom-index {
     background: url('../image/nav_icon01.png') no-repeat left top;
 }
-.header-bottom-index>a{
+.header-bottom-index>a {
     margin: 1px 30px 0 0;
 }
 .header-bottom-sport {
@@ -211,7 +192,6 @@ body,input {
     left: 0;
     height: 435px;
     background: url('../image/slider.jpg') no-repeat center;
-    /* background-size: contain; */
 }
 .slide-items {
     position: absolute;
@@ -418,12 +398,12 @@ body,input {
 .btn-lottery-next {
     background: url('../image/lang/zh-cn/lottery_btn04.png');
 }
-
 .btn-hover:hover {
     background-position: bottom;
 
 }
-.main-visibility:hover,.main-visibility:hover .btn-box-game{
+.main-visibility:hover,
+.main-visibility:hover .btn-box-game {
     visibility: visible;
     background-position: bottom;
 }
@@ -431,12 +411,12 @@ body,input {
     height: 206px;
     background: url('../image/footer_bg.jpg') no-repeat center;
 }
-.footer{
+.footer {
     width: 1070px;
     padding: 26px 0 0 0;
     margin: 0 auto 50px auto ;
 }
-.footer-img-ublogo{
+.footer-img-ublogo {
     float: left;
     width: 146px;
     height: 48px;
@@ -465,7 +445,6 @@ body,input {
     margin: 0 0 10px 0;
     text-align: center;
 }
-
 .footer-copyright {
     text-align: center;
 }
