@@ -140,7 +140,8 @@ body,input {
     background-position: left bottom;
     color: #FFF000;
 }
-.header-bottom-index {
+.header-bottom .header-bottom-index {
+    margin: 10px 10px 10px 30px;
     background: url('../image/nav_icon01.png') no-repeat left top;
 }
 .header-bottom-sport {
