@@ -16,7 +16,6 @@ body,input {
     width: 1180px;
     padding: 0 55px;
     margin: 0 auto;
-    box-sizing: border-box;
 }
 .header-form {
     width: 100%;
