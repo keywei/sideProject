@@ -48,12 +48,10 @@ body,input {
     cursor: pointer;
     color: #FFDE00;
 }
-.nav-top-items .flag {
-    margin: 7px 0 0 7px;
-    cursor: pointer;
-}
 .flag {
     float: left;
+    margin: 8px 2px 0 7px;
+    cursor: pointer;
 }
 .navt-top-item-flag {
     float: left;
@@ -125,8 +123,8 @@ body,input {
 .header-bottom-btn {
     float: left;
     height: 24px;
-    padding: 0 0 0 35px;
-    margin: 10px 0 10px 22px;
+    padding: 0 0 0 31px;
+    margin: 13px 0 7px 22px;
     color: #FFF;
     cursor: pointer;
 }
@@ -203,14 +201,15 @@ body,input {
     background: url('../image/news_bg_x.jpg');
 }
 .news-box{
-    width: 1070px;
+    width: 1180px;
+    padding: 0 55px;
     margin: 0 auto;
 }
 .news-title {
     float: left;
     width: 95px;
     height: 15px;
-    margin: 10px 3px 0 10px;
+    margin: 11px 3px 0 10px;
     background: url('../image/news_icon.png') no-repeat;
 }
 .news-words {
@@ -220,21 +219,20 @@ body,input {
     color: #FFF;
 }
 .main-body-container-bg {
-    padding: 27px 0 24px 0;
     background: url('../image/container_bg1.jpg') no-repeat center;
 }
 .main-body-container {
     width: 1180px;
-    margin: 0px auto;
+    margin: 35px auto 22px;
 }
 .main-body-container-title {
     height: 80px;
-    margin: 0px auto;
+    margin:0 auto 25px;
     background: url('../image/lang/zh-cn/game_title.png') no-repeat center;
 }
 .main-body-category{
-    padding: 0 50px;
-    margin: 18px 0;
+    padding: 0 49px;
+    margin: 18px 0 0 0;
 }
 .container-casino {
     position: relative;
@@ -251,16 +249,16 @@ body,input {
 }
 .btn-casino-icon-box {
     position: absolute;
-    right: 30px;
-    bottom: 85px;
+    right: 10px;
+    bottom: 86px;
     height: 205px;
-    width: 174px;
+    width: 195px;
 }
 .btn-casino-icon {
     float: left;
     width: 81px;
     height: 95px;
-    margin: 3px 3px;
+    margin: 0 13px 0 0;
     cursor: pointer;
 }
 .btn-casino-icon:hover {
@@ -282,7 +280,7 @@ body,input {
     float: left;
     width: 160px;
     height: 54px;
-    margin: 3px 0 0 7px;
+    margin: 22px 0 0 7px;
     cursor: pointer;
     background: url('../image/lang/zh-cn/game_btn01.png'); 
 }
@@ -310,7 +308,7 @@ body,input {
     background: url('../image/lang/zh-cn/cardgame_bg.png');
 }
 .main-body-container-sports {
-    margin: 0px 18px 0 18px;
+    margin: 0px 19px 0 19px;
     background: url('../image/lang/zh-cn/sports_bg.png');
 }
 .main-body-container-lottery {
@@ -415,4 +413,7 @@ body,input {
 }
 .footer-connect {
     margin: 0 0 10px 0;
+}
+.footer-connect>span:nth-of-type(even) {
+    margin: 0 4px;
 }
