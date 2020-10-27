@@ -1,0 +1,435 @@
+* {
+    box-sizing: border-box;
+}
+.clearfix {
+    display: block;
+    content:' ';
+    clear: both;
+}
+.clearfix {
+    overflow:hidden;
+}
+.container {
+    width: 100%;
+    min-width: 1425px;
+}
+.login-bg {
+    position: absolute;
+    width: 223px;
+    height: 317px;
+    margin-left: 19px;
+    padding: 14px 22px;
+    background: #FFF;
+    z-index: 5;
+}
+.login-logo {
+    width: 175px;
+    height: 87px;
+    margin: 0 auto 18px auto;
+    cursor: pointer;
+    background: url('../image/logo.png') no-repeat center;
+}
+.login-input {
+    width: 100%;
+    height: 30px;
+    margin-bottom: 15px;
+    font-size: 12px;
+    border: none;
+    border-bottom: 1px solid #999;
+}
+.login-btn {
+    width: 176px;
+    height: 36px;
+    margin: 8px 0 0 2px;
+    background: url('../image/btn_login.png') no-repeat center top ;
+}
+.login-btn:hover {
+    background-position: center bottom;
+}
+.login-link-box {
+    margin-top: 12px;
+    text-align: center;
+    font-size: 12px;
+    color: #595F64;
+}
+.login-link-symbol {
+    margin: 0 10px;
+    font-size: 16px;
+}
+.login-link {
+    vertical-align: text-top;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+.login-link:hover {
+    color: #222;
+}
+.login-body-shadow {
+    position: absolute;
+    left: -4px;
+    bottom: -29px;
+    width: 233px;
+    height: 33px;
+    background: url('../image/shadow_login.png') no-repeat center;
+}
+.header-bg {
+    background-color: #08BAE7;
+}
+.items {
+    font-size: 12px;
+    text-indent: 39px;
+    color: #FFF;
+    z-index: 5;
+    line-height: 38px;
+    visibility: hidden;
+    background: rgba(85, 85, 85, 0.95);
+}
+.items div:hover,td:hover{
+    cursor: pointer;
+    color: #FF0;
+}
+.sports-item {
+    position: absolute;
+    top: 112px;
+    left: 468px;
+    width: 130px;
+    height: 154px;
+}
+.live-item {
+    position: absolute;
+    top: 112px;
+    left: 564px;
+    height: 349px;
+    width: 130px;
+}
+.live-item-first {
+    font-size: 14px;
+    color: #FFBF00;
+    text-indent: 0;
+    text-align: center;
+}
+.items .live-item-first:hover {
+    cursor: unset;
+    color: #FFBF00;
+}
+.electrinc-item {
+    position: absolute;
+    top: 112px;
+    left: 500px;
+    height: 153px;
+    width: 448px;
+
+}
+.lottery-item {
+    position: absolute;
+    top: 112px;
+    left: 766px;
+    height: 78px;
+    width: 130px;
+
+}
+.card-item {
+    position: absolute;
+    top: 112px;
+    left: 864px;
+    height: 40px;
+    width: 130px;
+}
+.header-body {
+    width: 1425px;
+    padding: 0 112.5px;
+    margin: 0 auto;
+}
+.header-language {
+    float: right;
+    width: 194px;
+    margin-right: 4px;
+    background: url('../image/bg_lang.png') no-repeat center;
+}
+.language-cn {
+    line-height: 45px;
+    padding-left: 15px;
+    font-size: 15px;
+    text-align: center;
+    color: #FFF;
+    cursor: pointer;
+}
+.language-downdrop {
+    vertical-align: bottom;
+    font-size: 28px;
+}
+.bgg {
+    position: relative;
+}
+.header-items {
+    float: right;
+    margin-right: 50px;
+}
+.header-item {
+    float: left;
+    width: 95px;
+    line-height: 52px;
+    margin: 8px 0 0px 4px;
+    padding-bottom: 7px;
+    text-align: center;
+    font-size: 13px;
+    letter-spacing: 1px;
+    color: #FFF;
+    cursor: pointer;
+}
+.header-item:hover {
+    color: #FF0;
+}
+.header-item:hover + .items,.items:hover {
+    visibility: visible;
+}
+.header-item-index {
+    color: #FF0;
+}
+
+.news-bg {
+    background: #000;
+}
+.news-body {
+    width: 1400px;
+    padding: 0 100px;
+    margin: 0 auto;
+}
+.news-logo {
+    float: right;
+    width: 80px;
+    height: 53px;
+    background: url('../image/news_bg.png') no-repeat center;
+}
+.news-words {
+    float: right;
+    width: 800px;
+    margin: 0 53px 0 0;
+    padding-top: 17px;
+}
+.marquee {
+    color: #FFF;
+    font-size: 13px;
+    cursor: pointer;
+}
+.marquee:hover {
+    text-decoration: underline;
+}
+.header-carousel {
+    position: relative;
+    height: 435px;
+    background: url('../image/slider01.png') no-repeat center;
+}
+.carousel-sliders {
+    position: absolute;
+    left: 50%;
+    bottom: 6px;
+    margin-left: -21.5px;
+}
+.carousel-slider {
+    float: left;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+}
+.slider-active {
+    margin-right: 13px;
+    background: url('../image/slider_ctrl.png') no-repeat center right;
+}
+.slider {
+    background: url('../image/slider_ctrl.png') no-repeat center left;
+}
+.container-body {
+    position: relative;
+}
+.container-body-up {
+    position: relative;
+    /* width: 1425px; */
+    margin: 0 auto;
+}
+.live-casino-bg {
+    float: left;
+    width: 612px;
+    height: 863px;
+    cursor: pointer;
+    background: url('../image/lang/zh-cn/btn_live.png') no-repeat center top;
+}
+.live-casino-bg:hover {
+    background: url('../image/lang/zh-cn/btn_live.png') no-repeat center bottom;
+}
+.container-body-right {
+    position: absolute;
+    width: 100%;
+    left: 612px;
+}
+.sports-bg {
+    float: left;
+    width: 1060px;
+    height: 420px;
+    cursor: pointer;
+    background: url('../image/lang/zh-cn/btn_sports.png') no-repeat #010005 left top;
+
+}
+.sports-bg:hover {
+    background: url('../image/lang/zh-cn/btn_sports.png') no-repeat #010005 left bottom;
+
+}
+.promotions-bg {
+    float: left;
+    width: 699px;
+    height: 443px;
+    cursor: pointer;
+    background: url('../image/lang/zh-cn/btn_promotions.png') no-repeat center top;
+}
+.promotions-bg:hover {
+    background: url('../image/lang/zh-cn/btn_promotions.png') no-repeat center bottom;
+}
+.container-body-middle {
+    position: relative;
+    height: 100%;
+    width: 1425px;
+    margin: 0 auto;
+}
+.container-body-left {
+    float: left;
+}
+.welcome-bg {
+    width: 802px;
+    height: 264px;
+    background: url('../image/lang/zh-cn/main_welcome.png') no-repeat center;
+}
+.lottery-bg {
+    width: 597px;
+    height: 507px;
+    cursor: pointer;
+    background: url('../image/lang/zh-cn/btn_lottery.png') no-repeat center top;
+}
+.lottery-bg:hover {
+    background: url('../image/lang/zh-cn/btn_lottery.png') no-repeat center bottom;
+}
+.mobile-bg {
+    position: absolute;
+    left: 50%;
+    top: 1125px;
+    width: 206px;
+    height: 539px;
+    margin-left: -116px;
+    z-index: 5;
+    cursor: pointer;
+    background: url('../image/lang/zh-cn/btn_mobilebetting.png') no-repeat center top;
+}
+.mobile-bg:hover {
+    background: url('../image/lang/zh-cn/btn_mobilebetting.png') no-repeat center bottom;
+}
+.electrinc-casino-bg {
+    position: absolute;
+    left: 802px;
+    width: 622.72px;
+    height: 772px;
+    cursor: pointer;
+    background: url('../image/lang/zh-cn/btn_casino.png') no-repeat left top;
+}
+.electrinc-casino-bg:hover {
+    background: url('../image/lang/zh-cn/btn_casino.png') no-repeat left bottom;
+}
+.container-body-down {
+    position: relative;
+    background: #000;
+}
+.game-bg {
+    position: absolute;
+    width: 588px;
+    height: 581px;
+    margin: 30px 0 0 215px;
+    background: url('../image/game_slider01.png') no-repeat center;
+}
+.container-game-bg {
+    position: relative;
+    width: 1425px;
+    margin: 0 auto;
+}
+.game-bg:hover {
+    background: url('../image/game_slider01_hover.png') no-repeat center;
+}
+.words-content {
+    float: left;    
+    margin:147px 0 128px 850px;
+}
+.words-bg {  
+    width: 422px;
+    height: 216px;   
+    background: url('../image/bottom_txt.png') no-repeat center;
+}
+.words {
+    margin: 49px 0 0 0;
+    color: #FFF;
+    line-height: 36px;
+}
+.container-footer {
+    position: relative;
+}
+.footer {
+    background: #0173BC;
+}
+.top-icon {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    width: 77px;
+    height: 93px;
+    margin-left: 523px;
+    cursor: pointer;;
+    background: url('../image/btn_top.png') no-repeat left center;
+}
+.top-icon:hover {
+    background: url('../image/btn_top.png') no-repeat right center;
+
+}
+.footer-connect {
+    height: 117px;
+    margin: 61px auto 95px auto;
+    background: url('../image/footer_img01.png') no-repeat center;
+}
+.footer-service {
+    height: 120px;
+    background: url('../image/lang/zh-cn/footer_img02.png') #016CB4 no-repeat center;
+}
+.footer-logos {
+    width: 251px;
+    margin: 23px auto 38px auto;
+}
+.footer-logo-bbin {
+    float: left;
+    width: 96px;
+    height: 36.92px;
+    margin-right: 25px;
+    cursor: pointer;
+    background: url('../image/not-use/white.png') no-repeat center center;
+    background-size: contain;
+}
+.footer-logo-ub {
+    float: left;
+    width: 130px;
+    height: 34.7px;
+    cursor: pointer;
+    background: url('../image/not-use/ublogo/white.png') no-repeat center;
+    background-size: contain;
+
+}
+.footer-words {
+    font-size: 15px;
+    color: #FFF;
+    text-align: center;
+}
+.footer-words span{
+    margin: 0 15px;
+    cursor: pointer;
+}
+.footer-words span:hover {
+    text-decoration: underline;
+}
+.copyright {
+    margin: 49px auto 43px auto;
+    text-align: center;
+    color: #A7DBFE;
+}
