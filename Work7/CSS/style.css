@@ -158,9 +158,6 @@
     vertical-align: bottom;
     font-size: 28px;
 }
-.bgg {
-    position: relative;
-}
 .header-items {
     float: right;
     margin-right: 50px;
@@ -245,6 +242,11 @@
 .container-body-up {
     position: relative;
     /* width: 1425px; */
+    /* margin: 0 auto; */
+}
+.container-bg {
+    position: relative;
+    width: 1425px;
     margin: 0 auto;
 }
 .live-casino-bg {
@@ -259,11 +261,14 @@
 }
 .container-body-right {
     position: absolute;
-    width: 100%;
     left: 612px;
+    width: 100%;
 }
 .sports-bg {
-    float: left;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -101px;
     width: 1060px;
     height: 420px;
     cursor: pointer;
@@ -279,6 +284,7 @@
     width: 699px;
     height: 443px;
     cursor: pointer;
+    margin-top: 420px;
     background: url('../image/lang/zh-cn/btn_promotions.png') no-repeat center top;
 }
 .promotions-bg:hover {
