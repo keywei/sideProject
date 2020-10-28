@@ -10,7 +10,6 @@
     width: 100%;
     min-width: 1425px;
     margin: auto;
-    overflow: hidden;
 }
 .login-bg {
     position: absolute;
@@ -94,10 +93,9 @@
     background: url('../image/bg_lang.png') no-repeat center;
 }
 .language-cn {
-    width: 100%;
     line-height: 47px;
+    padding: 0 32px 0 46px;
     font-size: 15px;
-    margin-left: 8px;
     text-align: center;
     color: #FFF;
     cursor: pointer;
@@ -193,6 +191,8 @@
 }
 .container-body-up {
     position: relative;
+    overflow: hidden;
+
 }
 .container-bg {
     width: 1425px;
@@ -233,11 +233,11 @@
     background: url('../image/lang/zh-cn/btn_promotions.png') no-repeat center bottom;
 }
 .container-body-middle {
-    position: relative;
     width: 1425px;
     margin: 0 auto;
 }
 .container-body-left {
+    position: relative;
     float: left;
 }
 .welcome-bg {
@@ -256,11 +256,10 @@
 }
 .mobile-bg {
     position: absolute;
-    left: 50%;
+    right: 0;
     bottom: -31px;
     width: 206px;
     height: 539px;
-    margin-left: -116px;
     z-index: 5;
     cursor: pointer;
     background: url('../image/lang/zh-cn/btn_mobilebetting.png') no-repeat center top;
@@ -270,7 +269,7 @@
 }
 .electrinc-casino-bg {
     float: left;
-    width: 622.72px;
+    width: 509px;
     height: 772px;
     cursor: pointer;
     background: url('../image/lang/zh-cn/btn_casino.png') no-repeat left top;
@@ -279,19 +278,18 @@
     background: url('../image/lang/zh-cn/btn_casino.png') no-repeat left bottom;
 }
 .container-body-down {
-    position: relative;
     background: #000;
 }
 .container-game-bg {
-    position: relative;
     width: 1425px;
     margin: 0 auto;
 }
 .game-bg {
+    position: relative;
     float: left;    
     width: 588px;
     height: 581px;
-    margin: 30px 0 0 215px;
+    margin: 30px 0 0 214px;
     cursor: pointer;
     background: url('../image/game_slider01.png') no-repeat center;
 }
@@ -319,15 +317,14 @@
 .footer {
     position: relative;
     width: 1425px;
-    margin: 0 auto;
+    margin: 0 auto 96px;
 }
 .top-icon {
     position: absolute;
     top: -81px;
-    right: 15px;
+    right: 112px;
     width: 77px;
     height: 93px;
-    margin-right: 97px;
     cursor: pointer;;
     background: url('../image/btn_top.png') no-repeat left center;
 }
@@ -336,7 +333,7 @@
 }
 .footer-connect {
     height: 117px;
-    margin: 0 auto 96px;
+    margin: 0 auto;
     background: url('../image/footer_img01.png') no-repeat center;
 }
 .footer-service {
