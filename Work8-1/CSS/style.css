@@ -1,0 +1,208 @@
+* {
+    box-sizing: border-box;
+}
+.clearfix::after {
+    display: block;
+    content: '';
+    clear: both;
+}
+.container {
+    min-width: 36rem;
+    margin: 0 auto;
+}
+.header {
+    line-height: 0;
+    text-align: center;
+}
+.header-img {
+    width: 100%;
+}
+.news-bg {
+    position: relative;
+    width: 100%;
+    height: 15.2rem;
+    margin: 0 auto;
+    background:linear-gradient(to bottom,#272727 0%,#272727 61%,#000 60%,#000 100%);
+}
+.news {
+    padding: 0.9rem 0 0.9rem 1rem;
+    color: #FFF;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow:ellipsis;
+}
+.member-items {
+    margin: 0 1.3rem;
+}
+.member-title {
+    border-radius: 5px 5px 0 0;
+    background: linear-gradient(to right,#EFDFAF,#DDC084,#EDBF6B)
+}
+.member-msg {
+    float: left;
+    margin: 0.9rem 0 0.9rem 1rem;
+    color: #57381b;
+}
+.member-information {
+    float: right;
+    min-width: 8rem;
+    height: 2.4rem;
+    line-height: 2.4rem;
+    margin: 0.4rem 0.7rem 0.4rem 0;
+    color: #FFF;
+    text-align: center;
+    border-radius: 1.2rem;
+    background-color: #9c6e54;
+}
+.member-btns {
+    background-color: #FFF;
+    border-radius: 0 0 0.5rem 0.5rem;
+}
+.btns-feature {
+    float: left;
+    margin: 0 0.7rem 0.9rem;
+}
+.btn-icon {
+    float: left;
+    text-align: center;
+    line-height: 1rem;
+    color: #2e4a83;
+   
+}
+.btn-img {
+    height: 4.9rem;
+    width: 4.9rem;
+    margin: 0.5rem 0.4rem;
+}
+.btn-login {
+    float: left;
+    line-height: 1rem;
+    text-align: center;
+    color: #57381b;
+    border-right: 2px dashed gray;
+}
+.btn-login-img {
+    height: 4.9rem;
+    width: 4.9rem;
+    margin: 0.5rem 2rem;
+}
+
+.content {
+    padding:0 1.3rem;
+    margin: 0 auto;
+    background-color: #000;
+}
+.content-btns {
+    float: left;
+    margin: 0 auto;
+}
+.content-btns-icon {
+    width: 11rem;
+    line-height: 4rem;
+    margin-bottom: 0.8rem;
+    border-radius: 1rem;
+    background: linear-gradient(to right,#EFDFAF,#DDC084,#EDBF6B)
+}
+.person-btn-bg {
+    background: #34508e;
+}
+.btn-word {
+    display: inline-block;
+    width: 5.2rem;
+    line-height: 1;
+    vertical-align: middle;
+    color: #57381b;
+}
+.person-btn-word {
+    color: #FFF;
+}
+.content-btn-img {
+    width: 2.7rem;
+    height: 2.7rem;
+    vertical-align: middle;
+    margin: 0 0.4rem 0 1.1rem ;
+}
+.content-lives {
+    float: left;
+    margin-left: 0.6rem;
+}
+.live-icon {
+    position: relative;
+    margin-bottom: 0.8rem;
+}
+.live-img {
+    width: 21.8rem;
+    height: 9.8rem;
+}
+.img-words {
+    position: absolute;
+    top: 0.4rem;
+    left: 0.6rem;
+    color: #FFF;
+}
+.small-icon {
+    position: relative;
+    float:left;
+}
+.small-icon-distance {
+    margin-right: 0.6rem;
+}
+.small-img {
+    object-fit: cover;
+    object-position: 100%;
+    width: 10.6rem;
+    height: 7.9rem;
+}
+.footer {
+    position: relative;
+    top: -3.9rem;
+    background-color: #393939;
+}
+.footer-icons {
+    width: 32rem;
+    padding: 0.6rem 0;
+    margin: 0 auto;
+}
+.footer-icon {
+    position: relative;
+    float: left;
+    width: 8rem;
+    line-height: 1;
+    color: #FFF;
+    text-align: center;
+}
+.footer-img {
+    width: 2.4rem;
+    height: 2.4rem;
+}
+.footer-index-color {
+    color: #efd497;
+}
+.dot {
+    position: absolute;
+    top: 0;
+    right: 2.8rem;
+    width: 0.5rem;
+    height: 0.5rem;
+    background: #ff0101;
+}
+@media screen and (max-width: 767px) {
+    html {
+        font-size: 13.3333px;
+    }
+}
+@media screen and (max-width:480px) {
+    html {
+        font-size: 62.5%;
+    }
+}
+@media screen and (min-width: 768px) {
+    html {
+        font-size: 21.3333px;
+    }
+    .content,.news-bg {
+        max-width: 768px;
+    }
+}
+
+
