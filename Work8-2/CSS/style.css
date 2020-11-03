@@ -1,5 +1,10 @@
+html {
+    background-color: #000;
+    height: 100%;
+}
 body {
     margin: 0;
+    height: 100%;
 }
 * {
     box-sizing: border-box;
@@ -9,70 +14,66 @@ body {
     content: '';
     clear: both;
 }
+.container {
+    position: relative;
+    min-height: 100%;
+}
 .header {
-    padding: 0.6rem 1.2rem 0;
+    height: auto;
+    padding: 1.6666% 3.3333% 0;
     background-color: #272727;
 }
 .msg {
     position: relative;
     text-align: right;
-    margin: 0 1rem 0.5rem auto;
+    width: 8.0357%;
+    margin: 0 2.7777% 1.3888% auto;
 }
 .msg-img {
-    width: 2.7rem;
-    height: 2.7rem;
+    width: 100%;
 }
 .number {
     position: absolute;
     top: 0;
-    right: -0.7rem;
-    width: 2rem;
-    height: 2rem;
+    right: -25.9259%;
+    width: 74.074%;
+    line-height: 2rem;
     text-align: center;
-    border-radius: 1.5rem;
-    color: #FFF;
+    border-radius: 1rem;
+    color: #F8F1EB;
     background-color: #ff0101;
     
 }
 .member-bg {
-    width: 33.6rem;
-    height: 6.2rem;
+    width: 100%;
     margin: 0 auto;
     border-radius: 0.5rem 0.5rem 0 0;
-    background: linear-gradient(to right,#EFDFAF,#DDC084,#EDBF6B)
+    background: linear-gradient(to right,#EFDFAF,#DDC084,#EDBF6B);
 }
 .member {
     position: relative;
     float: left;
-    width: 5.3rem;
-    height: 5.3rem;
-    margin: 0.5rem 1rem 0.4rem 1.1rem;
-    border: 0.2rem dashed #808080;
+    width: 15.7738%;
+    margin: 0.8928% 2.9761% 0.5952% 3.2738%;
 }
 .member-photo {
     width: 100%;
-    padding: 0.1rem;
     border-radius: 50%;
-    background-color: #FFF;
+    background-color: #F8F1EB;
 }
 .add-bg {
     position: absolute;
-    right: 0;
-    bottom: 0;
+    right: 0.5rem;
+    bottom: 0.5rem;
     width: 1.7rem;
     height: 1.7rem;
-    padding: 0.2rem;
-    border-radius: 50%;
-    background-color: #FFF;
-}
-.add {
-    color: #FFF;
+    line-height: 1.4rem;
+    border-radius: 0.85rem;
+    border: 0.1rem solid #F8F1EB;
     text-align: center;
     font-weight: 900;
-    border-radius: 50%;    
-    line-height:1;
+    color: #F8F1EB;
     background-color: #472805;
-
 }
 .member-msg {
     float: left;
@@ -90,10 +91,10 @@ body {
 }
 .level {
     display: inline-block;    
-    width: 5.4rem;
+    width: 44.1176%;
     line-height: 2.2rem;
-    margin-left: 1.1rem;
-    color: #FFF;
+    margin-left: 17.9738%;
+    color: #F8F1EB;
     border-radius: 1rem;
     text-align: center;
     background-color: #9c6e54;
@@ -102,32 +103,31 @@ body {
     color: #9c6e54;
 }
 .member-icons {
-    width: 33.6rem;
-    height: 7.9rem;
+    width: 100%;
     margin: 0 auto;
-    background-color: #FFF;
+    border-radius: 0 0 0.5rem 0.5rem;
+    background-color: #F8F1EB;
 }
 .icons {
     float: left;
-    padding: 0 1.1rem 0.5rem;
-    border-radius: 0 0 0,5rem 0.5rem;
-    border-right: 0.2rem dashed #808080;
-
+    width: 75.2976%;
+    padding: 0 3.2738% 1.488%;
+    border-right: 0.1rem solid #f0dfd6;
 }
 .btn-icon {
     float: left;
+    width: 21.3043%;
     line-height: 1.6rem;
+    margin: 2.1739% 1.7391% 0;
     text-align: center;
     color: #2e4a83;
    }
 .btn-img {
-    width: 4.9rem;
-    height: 4.9rem;
-    margin: 0.5rem 0.4rem 0;
-   }
+    width: 100%;
+}
 .wallets-icon {
     float: left;
-    width: 8.4rem;
+    width: 24.7023%;
     line-height: 7.9rem;
     text-align: center;
    }
@@ -136,45 +136,45 @@ body {
     line-height: 1;
     vertical-align: middle;
 }
+.money {
+    width: 5.2rem;
+    line-height: 2.7rem;
+    font-size: 2rem;
+    color: #5a3810;
+}
 .wallet {
     width: 5.2rem;
     line-height: 1.7rem;
     font-size: 1.3rem;
     color: #9c6e54;
 }
-.money {
-    width: 5.2rem;
-    line-height: 2.7rem;
-    font-size: 2rem;
-    color: #472805;
-}
 .mission {
-    width: 33.6rem;
-    height: 12.7rem;
+    width: 100%;
     margin: 0 auto;
 }
 .mission-bg {
     float: left;
-    width: 10.7rem;
+    width: 31.8452%;
     height: 10.7rem;
     padding: 0.7rem 1rem 0;
-    margin: 1rem 0 1.2rem;
+    margin: 2.9761% 0 3.5714%;
     border-radius: 1.2rem;
     background-color: #5E5450;
 }
 .mission-img {
-    width: 8.8rem;
+    display: block;
+    margin: 0 auto;
     height: 6.6rem;
 }
 .do {
-    color: #FFF;
+    color: #F8F1EB;
 }
 .reward {
     color: #786d69;
 }
 .mission-distance {
-    margin-left: 0.7rem;
-    margin-right: 0.7rem;
+    margin-left: 2.0833%;
+    margin-right: 2.0833%;
 }
 .container {
     min-width: 360px;
@@ -185,16 +185,15 @@ body {
     background: #000;
 }
 .function {
-    padding: 0.6rem 1.3rem 0.6rem 1.6rem;
+    padding: 1.6666% 3.6111% 1.6666% 4.4444%;
     border-bottom: 0.1rem solid #333333;
     color: #FFF;
 }
 .function-words {
-    margin-left: 0.3rem;
+    margin-left: 0.8333%;
 }
 .function-img {
-    width: 2.7rem;
-    height: 2.7rem;
+    width: 8.157%;
     vertical-align: middle;
 }
 .align {
@@ -210,32 +209,34 @@ body {
     color: #FFF;
 }
 .btn-bg {
-    padding: 1.2rem 0 1.1rem;
-    margin: 2.2rem auto;
+    padding: 3.6253% 0 3.3232%;
+    margin: 6.6465% auto;
     color: #9c6e54;
     border-radius: 2rem;
     text-align: center;
     background: linear-gradient(to right,#EFDFAF,#DDC084,#EDBF6B);
 }
 .footer {
-    position: relative;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
     background-color: #393939;
 }
 .footer-icons {
-    width: 32rem;
-    padding: 0.6rem 0;
+    width: 88.8889%;
+    padding: 1.6666% 0;
     margin: 0 auto;
 }
 .footer-icon {
     position: relative;
     float: left;
-    width: 8rem;
+    width: 25%;
     line-height: 1;
     color: #FFF;
     text-align: center;
 }
 .footer-img {
-    width: 2.4rem;
+    width: 30%;
     height: 2.4rem;
 }
 .footer-color {
@@ -245,7 +246,7 @@ body {
     position: absolute;
     top: 0;
     right: 2.8rem;
-    width: 0.5rem;
+    width: 6.25%;
     height: 0.5rem;
     background: #ff0101;
 }
