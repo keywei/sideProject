@@ -1,4 +1,9 @@
+html {
+    height: 100%;
+    background-color: #000;
+}
 body {
+    height: 100%;
     margin: 0;
 }
 * {
@@ -10,6 +15,8 @@ body {
     clear: both;
 }
 .container {
+    position: relative;
+    min-height: 100%;
     min-width: 36rem;
     margin: 0 auto;
 }
@@ -23,22 +30,20 @@ body {
 .news-bg {
     position: relative;
     width: 100%;
-    height: 15.2rem;
+    padding:0 3.6111% 2.2222%;
     margin: 0 auto;
     background:linear-gradient(to bottom,#272727 0%,#272727 61%,#000 60%,#000 100%);
 }
 .news {
-    padding: 0.9rem 0 0.9rem 1rem;
+    padding: 2.5% 0 2.5% 2.7777%;
     color: #FFF;
     white-space: nowrap;
     overflow: hidden;
     text-overflow:ellipsis;
 }
-.member-items {
-    margin: 0 1.3rem;
-}
+
 .member-title {
-    border-radius: 5px 5px 0 0;
+    border-radius: 0.5rem 0.5rem 0 0;
     background: linear-gradient(to right,#EFDFAF,#DDC084,#EDBF6B)
 }
 .member-msg {
@@ -61,48 +66,49 @@ body {
     background-color: #FFF;
     border-radius: 0 0 0.5rem 0.5rem;
 }
-.btns-feature {
-    float: left;
-    margin: 0 0.7rem 0.9rem;
-}
 .btn-icon {
     float: left;
+    width: 14.6705%;
+    margin: 1.497% 1.796% 1.796% 0;
     text-align: center;
-    line-height: 1rem;
     color: #2e4a83;
-   
+}
+.deposit-distance {
+    margin-left: 3.8922%;
+}
+.vip-distance {
+    margin-right: 3.8922%;
 }
 .btn-img {
-    height: 4.9rem;
-    width: 4.9rem;
-    margin: 0.5rem 0.4rem;
+    width: 100%;
 }
 .btn-login {
     float: left;
-    line-height: 1rem;
+    width: 27%;
     text-align: center;
     color: #57381b;
-    border-right: 2px dashed gray;
+    padding-bottom: 2.3952%;
+    border-right: 0.2rem solid gray;
 }
 .btn-login-img {
-    height: 4.9rem;
-    width: 4.9rem;
-    margin: 0.5rem 2rem;
+    width: 55.5744%;
+    margin: 5.6708% 22.678% 0;
 }
 
 .content {
-    padding:0 1.3rem;
+    padding:0 3.6111%;
     margin: 0 auto;
     background-color: #000;
 }
 .content-btns {
     float: left;
-    margin: 0 auto;
+    width: 32.9341%;
 }
 .content-btns-icon {
-    width: 11rem;
-    line-height: 4rem;
-    margin-bottom: 0.8rem;
+    width: 100%;
+    line-height: 100%;
+    margin-bottom: 7.2727%;
+    padding: 5.909% 0;
     border-radius: 1rem;
     background: linear-gradient(to right,#EFDFAF,#DDC084,#EDBF6B)
 }
@@ -120,22 +126,21 @@ body {
     color: #FFF;
 }
 .content-btn-img {
-    width: 2.7rem;
-    height: 2.7rem;
+    width: 24.5454%;
     vertical-align: middle;
-    margin: 0 0.4rem 0 1.1rem ;
+    margin: 0 3.6363% 0 10% ;
 }
 .content-lives {
     float: left;
-    margin-left: 0.6rem;
+    width: 65.2694%;
+    margin-left: 1.7964%;
 }
 .live-icon {
     position: relative;
-    margin-bottom: 0.8rem;
+    margin-bottom: 2.7522%;
 }
 .live-img {
-    width: 21.8rem;
-    height: 9.8rem;
+    width: 100%;
 }
 .img-words {
     position: absolute;
@@ -146,37 +151,39 @@ body {
 .small-icon {
     position: relative;
     float:left;
+    width: 48.6238%;
+    margin-bottom: 2.7522%;
 }
 .small-icon-distance {
-    margin-right: 0.6rem;
+    margin-right: 2.7522%;
 }
 .small-img {
     object-fit: cover;
     object-position: 100%;
-    width: 10.6rem;
+    width: 100%;
     height: 7.9rem;
 }
 .footer {
-    position: relative;
-    top: -3.9rem;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
     background-color: #393939;
 }
 .footer-icons {
-    width: 32rem;
-    padding: 0.6rem 0;
+    width: 88.889%;
+    padding: 1.6666% 0;
     margin: 0 auto;
 }
 .footer-icon {
     position: relative;
     float: left;
-    width: 8rem;
+    width: 25%;
     line-height: 1;
     color: #FFF;
     text-align: center;
 }
 .footer-img {
-    width: 2.4rem;
-    height: 2.4rem;
+    width: 30%;
 }
 .footer-index-color {
     color: #efd497;
@@ -184,9 +191,9 @@ body {
 .dot {
     position: absolute;
     top: 0;
-    right: 2.8rem;
-    width: 0.5rem;
-    height: 0.5rem;
+    right: 35%;
+    width: 6.25%;
+    height: 13.1578%;
     background: #ff0101;
 }
 @media screen and (max-width: 767px) {
@@ -196,7 +203,7 @@ body {
 }
 @media screen and (max-width:480px) {
     html {
-        font-size: 62.5%;
+        font-size: 10px;
     }
 }
 @media screen and (min-width: 768px) {
