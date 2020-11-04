@@ -46,7 +46,7 @@ body {
     text-align: center;
     border-radius: 1rem;
     color: #F8F1EB;
-    background-color: #ff0101;
+    background-color: #FF0101;
     
 }
 .member-bg {
@@ -103,10 +103,10 @@ body {
     color: #F8F1EB;
     border-radius: 1rem;
     text-align: center;
-    background-color: #9c6e54;
+    background-color: #9C6E54;
 }
 .time {
-    color: #9c6e54;
+    color: #9C6E54;
 }
 .member-icons {
     width: 100%;
@@ -118,7 +118,7 @@ body {
     float: left;
     width: 75.2976%;
     padding: 0 3.2738% 1.488%;
-    border-right: 0.1rem solid #f0dfd6;
+    border-right: 0.1rem solid #F0DFD6;
 }
 .btn-icon {
     float: left;
@@ -126,7 +126,7 @@ body {
     line-height: 1.6rem;
     margin: 2.1739% 1.7391% 0;
     text-align: center;
-    color: #2e4a83;
+    color: #2E4A83;
    }
 .btn-img {
     width: 100%;
@@ -146,13 +146,13 @@ body {
     width: 5.2rem;
     line-height: 2.7rem;
     font-size: 2rem;
-    color: #5a3810;
+    color: #5A3810;
 }
 .wallet {
     width: 5.2rem;
     line-height: 1.7rem;
     font-size: 1.3rem;
-    color: #9c6e54;
+    color: #9C6E54;
 }
 .mission {
     margin: 2.9761% 0 3.5714%;
@@ -174,7 +174,7 @@ body {
     color: #F8F1EB;
 }
 .reward {
-    color: #786d69;
+    color: #786D69;
 }
 .mission-distance {
     margin-left: 2.0833%;
@@ -191,7 +191,7 @@ body {
 .function {
     padding: 1.6666% 3.6111% 1.6666% 4.4444%;
     border-bottom: 0.1rem solid #333333;
-    color: #FFF;
+    color: #F8F1EB;
 }
 .function-words {
     margin-left: 0.8333%;
@@ -214,7 +214,7 @@ body {
 .btn-color {
     padding: 3.6253%  0;
     margin: 6.11% 0;
-    color: #9c6e54;
+    color: #9C6E54;
     border-radius: 2rem;
     text-align: center;
     background: linear-gradient(to right,#EFDFAF,#DDC084,#EDBF6B);
@@ -235,14 +235,14 @@ body {
     float: left;
     width: 25%;
     line-height: 1;
-    color: #FFF;
+    color: #F8F1EB;
     text-align: center;
 }
 .footer-img {
     width: 30%;
 }
 .footer-color {
-    color: #efd497;
+    color: #EFD497;
 }
 .dot {
     position: absolute;
@@ -251,7 +251,7 @@ body {
     width: 1rem;
     height: 1rem;
     border-radius: 50%;
-    background: #ff0101;
+    background: #FF0101;
 }
 @media screen and (max-width: 767px) {
     html {
