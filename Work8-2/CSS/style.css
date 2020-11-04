@@ -1,10 +1,13 @@
 html {
     background-color: #000;
+    margin: 0;
+    padding: 0;
     height: 100%;
 }
 body {
     margin: 0;
-    height: 100%;
+    padding: 0;
+        height: 100%;
 }
 * {
     box-sizing: border-box;
@@ -16,10 +19,12 @@ body {
 }
 .container {
     position: relative;
+    padding-bottom: 13.8888%;
     min-height: 100%;
 }
 .header {
-    height: auto;
+    max-width: 768px;
+    margin: 0 auto;
     padding: 1.6666% 3.3333% 0;
     background-color: #272727;
 }
@@ -36,7 +41,7 @@ body {
     position: absolute;
     top: 0;
     right: -25.9259%;
-    width: 74.074%;
+    width: 2rem;
     line-height: 2rem;
     text-align: center;
     border-radius: 1rem;
@@ -45,7 +50,7 @@ body {
     
 }
 .member-bg {
-    width: 100%;
+    display: flex;
     margin: 0 auto;
     border-radius: 0.5rem 0.5rem 0 0;
     background: linear-gradient(to right,#EFDFAF,#DDC084,#EDBF6B);
@@ -75,9 +80,9 @@ body {
     color: #F8F1EB;
     background-color: #472805;
 }
+
 .member-msg {
-    float: left;
-    line-height: 6.2rem;
+    align-self: center;
 }
 .member-box {
     display: inline-block;
@@ -88,6 +93,7 @@ body {
     font-size: 1.5rem;
     font-weight: 600;
     color: #472805;
+    vertical-align: middle;
 }
 .level {
     display: inline-block;    
@@ -149,15 +155,13 @@ body {
     color: #9c6e54;
 }
 .mission {
-    width: 100%;
-    margin: 0 auto;
+    margin: 2.9761% 0 3.5714%;
 }
 .mission-bg {
     float: left;
     width: 31.8452%;
     height: 10.7rem;
     padding: 0.7rem 1rem 0;
-    margin: 2.9761% 0 3.5714%;
     border-radius: 1.2rem;
     background-color: #5E5450;
 }
@@ -203,14 +207,13 @@ body {
     color: #472805;
     background: linear-gradient(to right,#EFDFAF,#DDC084,#EDBF6B);
 }
-.function-btn {
-    padding: 0.6rem 1.3rem 0 1.6rem;
-    border-bottom: 0.1rem solid #333333;
-    color: #FFF;
-}
 .btn-bg {
-    padding: 3.6253% 0 3.3232%;
-    margin: 6.6465% auto;
+    background-color: #000;
+    padding: 0 3.33%;
+}
+.btn-color {
+    padding: 3.6253%  0;
+    margin: 6.11% 0;
     color: #9c6e54;
     border-radius: 2rem;
     text-align: center;
@@ -244,9 +247,10 @@ body {
 .dot {
     position: absolute;
     top: 0;
-    right: 2.8rem;
-    width: 6.25%;
-    height: 0.5rem;
+    right: 35%;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
     background: #ff0101;
 }
 @media screen and (max-width: 767px) {
