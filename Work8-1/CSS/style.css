@@ -42,15 +42,15 @@ body {
     overflow: hidden;
     text-overflow:ellipsis;
 }
-
 .member-title {
     border-radius: 0.5rem 0.5rem 0 0;
     background: linear-gradient(to right,#EFDFAF,#DDC084,#EDBF6B)
 }
 .member-msg {
     float: left;
-    margin: 0.9rem 0 0.9rem 1rem;
-    color: #57381b;
+    line-height: 3.2rem;
+    margin-left: 3.59%;
+    color: #57381B;
 }
 .member-information {
     float: right;
@@ -61,7 +61,7 @@ body {
     color: #FFF;
     text-align: center;
     border-radius: 1.2rem;
-    background-color: #9c6e54;
+    background-color: #9C6E54;
 }
 .member-btns {
     background-color: #FFF;
@@ -70,32 +70,30 @@ body {
 .btn-icon {
     float: left;
     width: 14.6705%;
-    margin: 1.497% 1.796% 1.796% 0;
+    margin: 1.497% 1.796% 0 0;
     text-align: center;
-    color: #2e4a83;
+    color: #2E4A83;
 }
 .deposit-distance {
     margin-left: 3.8922%;
 }
-.vip-distance {
-    margin-right: 3.8922%;
-}
 .btn-img {
     width: 100%;
 }
-.btn-login {
+.login-box {
     float: left;
-    width: 27%;
+    width: 26.94%;
+    border-right: 0.01rem solid #FDEABC;
+}
+.btn-login {
     text-align: center;
-    color: #57381b;
-    padding-bottom: 2.3952%;
-    border-right: 0.2rem solid gray;
+    color: #57381B;
+    margin-bottom: 2.3952%;
 }
 .btn-login-img {
     width: 55.5744%;
     margin: 5.6708% 22.678% 0;
 }
-
 .content {
     padding:0 3.6111%;
     margin: 0 auto;
@@ -106,22 +104,20 @@ body {
     width: 32.9341%;
 }
 .content-btns-icon {
-    width: 100%;
-    line-height: 100%;
     margin-bottom: 7.2727%;
     padding: 5.909% 0;
     border-radius: 1rem;
     background: linear-gradient(to right,#EFDFAF,#DDC084,#EDBF6B)
 }
 .person-btn-bg {
-    background: #34508e;
+    background: #34508E;
 }
 .btn-word {
     display: inline-block;
     width: 5.2rem;
     line-height: 1;
     vertical-align: middle;
-    color: #57381b;
+    color: #57381B;
 }
 .person-btn-word {
     color: #FFF;
@@ -187,7 +183,7 @@ body {
     width: 30%;
 }
 .footer-index-color {
-    color: #efd497;
+    color: #EFD497;
 }
 .dot {
     position: absolute;
@@ -195,7 +191,7 @@ body {
     right: 35%;
     width: 6.25%;
     height: 13.1578%;
-    background: #ff0101;
+    background: #FF0101;
 }
 @media screen and (max-width: 767px) {
     html {
