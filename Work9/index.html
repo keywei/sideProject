@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="carousel">
+            <div class="prev icon">&lt;</div>
+            <div class="next icon">&gt;</div>
+            <div class="images"></div>
+            <div class="btns"></div>
+        </div>
+        
+    </div>
+    <script>
+        var img = [0,1,2,3,4,5]
+        var current = 0
+        var carousel = document.getElementsByClassName('carousel')[0]
+        var images = document.getElementsByClassName('images')[0]
+        var btns = document.getElementsByClassName('btns')[0]
+        var prev = document.getElementsByClassName('prev')[0]
+        var next = document.getElementsByClassName('next')[0]
+        var timer = null
+        function createImg(img){
+            let addDiv =""
+            let addBtn =""
+            img.forEach((value,index)=> {
+                addDiv += `<img class="img" id="${index}" src="images/${value}.jpg">` 
+                addBtn +=`<a class="btn" onclick="move('${index}')">${index+1}</a>`
+            })
+            images.innerHTML=addDiv
+            btns.innerHTML=addBtn
+        }
+        createImg(img)
+
+        var imagesWidth = images.children[0].offsetWidth
+        var movetimer = null
+        function move(id,s=30) {
+            clearInterval(movetimer)
+            cc(id)
+            s = (id == 0 && current ==images.children.length-1) ||
+                 (id == images.children.length-1 && current == 0) ? s=10 : s
+            current = id
+            let distance = -id * imagesWidth
+            movetimer = setInterval(function(){
+            let imagesCurrent = images.offsetLeft
+            let move = 40
+            move = imagesCurrent < distance ? move : -move
+            imagesCurrent += move;
+            if (Math.abs(imagesCurrent - distance) > Math.abs(move)) {
+                images.style.left = imagesCurrent + "px"
+            } else {
+                clearInterval(movetimer);
+                images.style.left = distance + "px"
+            }
+            },s)
+        }
+        function cc (id=0) {
+            for(i of btns.children){
+                i.classList.remove('active')
+            }btns.children[id].classList.add('active')
+        }
+        cc()
+        prev.addEventListener('click',function(){
+            let s
+            if(current == 0) {
+                current=images.children.length-1
+                s = 10
+            } else {
+                current--
+              } 
+            move(current,s)
+        })
+
+        next.addEventListener('click',function(){
+            let s
+            if(current == images.children.length-1){
+                current=0
+                s = 10
+            } else {
+                current++
+             }
+            move(current,s)
+        })
+        
+        function autoplay(){
+            timer = setInterval(function(){
+                    let s
+                        if(current > images.children.length-1){
+                            current = 0
+                            s = 10
+                        } else {
+                            current
+                          }
+                    move(current,s)
+                    current++
+                    },2000)
+        }
+        autoplay()
+
+        carousel.onmouseenter = function (){
+            clearInterval(timer)
+        }
+        carousel.onmouseleave = function (){
+            autoplay()
+        }
+    </script>
+</body>
