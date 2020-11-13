@@ -2,7 +2,7 @@ body {
     margin: 0;
 }
 .container {
-text-align: center;
+    text-align: center;
 }
 .carousel {
     position: relative;
@@ -10,11 +10,10 @@ text-align: center;
     height: 400px;
     overflow: hidden;
     margin: 0 auto;
-    z-index: 1;
 }
 .images {
     position: absolute;
-    width: 7200px;
+    width: 3000px;
     height: 400px;
 }
 .img {

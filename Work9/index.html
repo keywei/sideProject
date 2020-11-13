@@ -11,37 +11,39 @@
         <div class="carousel">
             <div class="prev icon">&lt;</div>
             <div class="next icon">&gt;</div>
-            <div class="images"></div>
+            <div class="images">
+                <img class="img"  src="images/0.jpg">
+                <img class="img"  src="images/1.jpg">
+                <img class="img"  src="images/2.jpg">
+                <img class="img"  src="images/3.jpg">
+                <img class="img"  src="images/4.jpg">
+                      
+            </div>
             <div class="btns"></div>
         </div>
         
     </div>
     <script>
-        var img = [0,1,2,3,4,5]
         var current = 0
         var carousel = document.getElementsByClassName('carousel')[0]
         var images = document.getElementsByClassName('images')[0]
         var btns = document.getElementsByClassName('btns')[0]
         var prev = document.getElementsByClassName('prev')[0]
         var next = document.getElementsByClassName('next')[0]
-        var timer = null
-        function createImg(img){
-            let addDiv =""
-            let addBtn =""
-            img.forEach((value,index)=> {
-                addDiv += `<img class="img" id="${index}" src="images/${value}.jpg">` 
-                addBtn +=`<a class="btn" onclick="move('${index}')">${index+1}</a>`
-            })
-            images.innerHTML=addDiv
-            btns.innerHTML=addBtn
-        }
-        createImg(img)
-
         var imagesWidth = images.children[0].offsetWidth
+        var timer = null
+        var addBtn = ""
+        console.log(images.children.length)
+        for (let i=0; i<images.children.length; i++){
+            addBtn +=`<a class="btn" onclick="move('${i}')">${i+1}</a>`
+        }
+        images.style.width = images.children.length* imagesWidth + "px"
+        btns.innerHTML=addBtn
+
         var movetimer = null
         function move(id,s=30) {
             clearInterval(movetimer)
-            cc(id)
+            indexbtn(id)
             s = (id == 0 && current ==images.children.length-1) ||
                  (id == images.children.length-1 && current == 0) ? s=10 : s
             current = id
@@ -59,12 +61,12 @@
             }
             },s)
         }
-        function cc (id=0) {
+        function indexbtn (id=0) {
             for(i of btns.children){
                 i.classList.remove('active')
             }btns.children[id].classList.add('active')
         }
-        cc()
+        indexbtn()
         prev.addEventListener('click',function(){
             let s
             if(current == 0) {
