@@ -8,8 +8,8 @@ body {
     position: relative;
     width: 600px;
     height: 400px;
-    overflow: hidden;
     margin: 0 auto;
+    overflow: hidden;
 }
 .images {
     position: absolute;
@@ -29,9 +29,9 @@ body {
     cursor: pointer;
     font-size: 20px;
     border: 2px solid gray;
+    color: rgb(129, 127, 127);
     opacity: 0.5;
     background: #000;
-    color: rgb(129, 127, 127);
 }
 .carousel .icon:hover {
     opacity: 1;
@@ -58,12 +58,12 @@ body {
     display: inline-block;
     width: 20px;
     margin-left: 2px;
-    border: 2px solid rgb(129, 127, 127);
     cursor: pointer;
-    background: #000;
     color: #FFF;
     text-decoration: none;
+    border: 2px solid rgb(129, 127, 127);
     border-radius: 20%;
+    background: #000;
 }
 .active {
     border: 2px solid red;
