@@ -32,38 +32,64 @@
         var next = document.getElementsByClassName('next')[0];
         var imagesWidth = images.children[0].offsetWidth;
         var timer = null;
+        var moveTimer = null;
         var addBtn = '';
 
-        for (let i = 0;i < images.children.length;i++ ) {
-            addBtn += '<a class = "btn" id = ' + i + '>' + parseInt(i + 1) + '</a>';
+        for(let i = 0; i < images.children.length; i++) {
+            addBtn += '<a class = "btn">' + parseInt(i + 1) + '</a>';//要加parseInt，不然頁面會變成字串相加
         }
-
-        images.style.width = images.children.length * imagesWidth + 'px';
         btns.innerHTML = addBtn;
 
-        for( let i = 0; i < btns.children.length; i++ ) {
+        images.style.width = images.children.length * imagesWidth + 'px';
+
+        for(let i = 0; i < btns.children.length; i++) {
             btns.children[i].addEventListener('click', function() {
-                clickBtn(this.id);
+                move(i);
             })
         }
 
-        function clickBtn(id) {
-            id = parseInt(id);
-            let s;
-            if((id === 0 && current === images.children.length - 1) ||
-                (id === images.children.length - 1 && current === 0)) {
-                    s = 10;
+        prev.addEventListener('click', function() {
+            let to;
+            if(current === 0) {
+                to = images.children.length - 1;
+            } else {
+                to = current - 1;
             } 
-            current = id;
-            move(id, s);
-        }
+            move(to);
+        });
 
-        var moveTimer = null;
-        function move(to, s) {
-            to = parseInt(to)
-            s = s || 30;
+        next.addEventListener('click', function() {
+            let to;
+            if(current === images.children.length - 1) {
+                to = 0;
+            } else {
+                to = current + 1;
+            }
+            move(to);
+        });
+
+        carousel.addEventListener('mouseenter', function() {
+            clearInterval(timer);
+        });
+
+        carousel.addEventListener('mouseleave', function() {
+            autoplay();
+        });
+
+        indexbtn();
+        autoplay();
+        
+        function move(to) {
+            let s;
+            if(to === 0 && current === images.children.length - 1 || 
+            current === 0 && to === images.children.length - 1) {
+                s = 10;
+            } else {
+                s = 30;
+            }
             clearInterval(moveTimer);
             indexbtn(to);
+            current = to;
             let toDistance = to * -imagesWidth;
             moveTimer = setInterval(function() {
                 let currentDistance = images.offsetLeft;
@@ -75,60 +101,30 @@
                 } else {
                     clearInterval(moveTimer);
                     images.style.left = toDistance + 'px';
-                  }
+                }
                 }, s);
         }
 
         function indexbtn(index) {
-            index = index || 0
+            index = index || 0;
             for(i of btns.children) {
-                i.classList.contains('active') ? i.classList.remove('active') : '';
+                if(i.classList.contains('active')) {
+                    i.classList.remove('active');
+                }
             }
             btns.children[index].classList.add('active');
         }
-        indexbtn();
-
-        prev.addEventListener('click', function() {
-            let s;
-            if(current === 0) {
-                current = images.children.length - 1;
-                s = 10;
-            } else {
-                current--;
-              } 
-            move(current, s);
-        })
-
-        next.addEventListener('click', function() {
-            let s;
-            if(current === images.children.length - 1) {
-                current = 0;
-                s = 10;
-            } else {
-                current++;
-              }
-            move(current, s);
-        })
         
         function autoplay() {
             timer = setInterval(function() {
-                let s;
+                let to;
                 if(current === images.children.length - 1) {
-                    current = 0
-                    s = 10;
-                    move(current, s);
+                    to = 0;
                 } else {
-                    move(++current);
+                    to = current + 1;
                 }
+                move(to);
             }, 2000);
-        }
-        autoplay();
-
-        carousel.onmouseenter = function (){
-            clearInterval(timer);
-        }
-        carousel.onmouseleave = function (){
-            autoplay();
         }
     </script>
 </body>
