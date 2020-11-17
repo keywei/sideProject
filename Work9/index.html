@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,21 +8,22 @@
     <link rel="stylesheet" href="CSS/normalize.css">
     <link rel="stylesheet" href="CSS/style.css">
 </head>
+
 <body>
     <div class="container">
         <div class="carousel">
             <div class="prev icon">&lt;</div>
             <div class="next icon">&gt;</div>
             <div class="images">
-                <img class="img"  src="images/0.jpg">
-                <img class="img"  src="images/1.jpg">
-                <img class="img"  src="images/2.jpg">
-                <img class="img"  src="images/3.jpg">
-                <img class="img"  src="images/4.jpg">
+                <img class="img" src="images/0.jpg">
+                <img class="img" src="images/1.jpg">
+                <img class="img" src="images/2.jpg">
+                <img class="img" src="images/3.jpg">
+                <img class="img" src="images/4.jpg">
             </div>
             <div class="btns"></div>
         </div>
-        
+
     </div>
     <script>
         var current = 0;
@@ -35,32 +37,32 @@
         var moveTimer = null;
         var addBtn = '';
 
-        for(let i = 0; i < images.children.length; i++) {
-            addBtn += '<a class = "btn">' + parseInt(i + 1) + '</a>';//要加parseInt，不然頁面會變成字串相加
+        for (let i = 0; i < images.children.length; i++) {
+            addBtn += '<a class = "btn">' + (i + 1) + '</a>';
         }
         btns.innerHTML = addBtn;
 
         images.style.width = images.children.length * imagesWidth + 'px';
 
-        for(let i = 0; i < btns.children.length; i++) {
-            btns.children[i].addEventListener('click', function() {
+        for (let i = 0; i < btns.children.length; i++) {
+            btns.children[i].addEventListener('click', function () {
                 move(i);
             })
         }
 
-        prev.addEventListener('click', function() {
+        prev.addEventListener('click', function () {
             let to;
-            if(current === 0) {
+            if (current === 0) {
                 to = images.children.length - 1;
             } else {
                 to = current - 1;
-            } 
+            }
             move(to);
         });
 
-        next.addEventListener('click', function() {
+        next.addEventListener('click', function () {
             let to;
-            if(current === images.children.length - 1) {
+            if (current === images.children.length - 1) {
                 to = 0;
             } else {
                 to = current + 1;
@@ -68,30 +70,28 @@
             move(to);
         });
 
-        carousel.addEventListener('mouseenter', function() {
+        carousel.addEventListener('mouseenter', function () {
             clearInterval(timer);
         });
 
-        carousel.addEventListener('mouseleave', function() {
+        carousel.addEventListener('mouseleave', function () {
             autoplay();
         });
 
         indexbtn();
         autoplay();
-        
+
         function move(to) {
-            let s;
-            if(to === 0 && current === images.children.length - 1 || 
-            current === 0 && to === images.children.length - 1) {
+            let s = 30;
+            if (to === 0 && current === images.children.length - 1 ||
+                current === 0 && to === images.children.length - 1) {
                 s = 10;
-            } else {
-                s = 30;
             }
             clearInterval(moveTimer);
             indexbtn(to);
             current = to;
             let toDistance = to * -imagesWidth;
-            moveTimer = setInterval(function() {
+            moveTimer = setInterval(function () {
                 let currentDistance = images.offsetLeft;
                 let move = 40;
                 move = currentDistance < toDistance ? move : -move;
@@ -102,23 +102,23 @@
                     clearInterval(moveTimer);
                     images.style.left = toDistance + 'px';
                 }
-                }, s);
+            }, s);
         }
 
         function indexbtn(index) {
             index = index || 0;
-            for(i of btns.children) {
-                if(i.classList.contains('active')) {
+            for (i of btns.children) {
+                if (i.classList.contains('active')) {
                     i.classList.remove('active');
                 }
             }
             btns.children[index].classList.add('active');
         }
-        
+
         function autoplay() {
-            timer = setInterval(function() {
+            timer = setInterval(function () {
                 let to;
-                if(current === images.children.length - 1) {
+                if (current === images.children.length - 1) {
                     to = 0;
                 } else {
                     to = current + 1;
