@@ -6,7 +6,7 @@ li {
 }
 a {
     text-decoration: none;
-    color: #636060;
+    color: #a79898;
 }
 #app {
     width: 600px;
@@ -17,11 +17,11 @@ a {
     font-family: 'Times New Roman', Times, serif;
 }
 .add-todo {
-    margin: 10px 0;
+    margin-top: 30px;
     text-align: left;
 }
 .add-todo input {
-    width: 85%;
+    width: 340px;
 }
 .add-todo > input:focus {
     outline: 2px dashed #26bd6a;
@@ -39,7 +39,6 @@ a {
     width: 400px;
     margin: 0 auto;
     border-radius: 5px;
-    background: #fff;
 }
 .items {
     position: relative;
@@ -48,7 +47,7 @@ a {
     margin: 10px 0;
     border-radius: 5px;
     border-bottom: 2px dashed #9c9898;
-    background: #f1c9c9;
+    background: #e9c7c7;
 }
 .todo {
     width: 230px;
@@ -75,10 +74,15 @@ a {
 .btn {
     padding: 0;
     vertical-align: middle;
+    outline: none;
     color: #726856;
+    cursor: pointer;
     background: #cac5c5;
 }
 .btn:hover {
     color: #ffffff;
     background: #2692bd;
+}
+input[type='checkbox'] {
+    cursor: pointer;
 }

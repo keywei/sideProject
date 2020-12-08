@@ -7,17 +7,14 @@ Vue.use(VueRouter);
 const routes = [
     {
         path: '/',
-        name: 'Home',
         component: Home
     },
     {
         path: '/todo',
-        name: 'Todo',
         component: () => import('../views/Todo.vue')
     },
     {
         path: '/finished',
-        name: 'Finished',
         component: () => import('../views/Finished.vue')
     }
 ];

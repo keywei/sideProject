@@ -1,7 +1,5 @@
 <template>
-    <div>
         <finished></finished>
-    </div>
 </template>
 
 <script>

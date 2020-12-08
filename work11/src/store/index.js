@@ -6,8 +6,11 @@ Vue.use(Vuex);
 export default new Vuex.Store({
     state: {
         toDoList: [
-            { id: 0, toDo: 'fishing', finished: true },
-            { id: 1, toDo: 'shopping', finished: false },
+            { id: 0, toDo: '早上要記得吃早餐', finished: true },
+            { id: 1, toDo: '12/25聖誕節，公司有聚會', finished: false },
+            { id: 2, toDo: '明年是2021年，新氣象', finished: true },
+            { id: 3, toDo: '下班記得要打卡', finished: false },
+            { id: 4, toDo: '老虎城有間漢堡店有空可以去吃', finished: false },
         ],
     },
     mutations: {
@@ -21,15 +24,21 @@ export default new Vuex.Store({
                 }
             });
         },
-        moveup(state, thing) {
-            state.toDoList.splice(thing.index - 1, 0, state.toDoList[thing.index]);
-            state.toDoList.splice(thing.index + 1, 1);
-            thing.index === 0 ? alert('已經在最前項了') : '';
+        moveup(state, toDo) {
+            if (toDo.index !== 0) {
+                state.toDoList.splice(toDo.index - 1, 0, state.toDoList[toDo.index]);
+                state.toDoList.splice(toDo.index + 1, 1);
+            } else {
+                alert('已經在最前項了');
+            }
         },
-        movedown(state, thing) {
-            state.toDoList.splice(thing.index + 2, 0, state.toDoList[thing.index]);
-            state.toDoList.splice(thing.index, 1);
-            thing.index === state.toDoList.length - 1 ? alert('已經在最後項了') : '';
+        movedown(state, toDo) {
+            if (toDo.index !== state.toDoList.length - 1) {
+                state.toDoList.splice(toDo.index + 2, 0, state.toDoList[toDo.index]);
+                state.toDoList.splice(toDo.index, 1);
+            } else {
+                alert('已經在最後項了');
+            }
         },
         send(state, cacheToDo) {
             state.toDoList.forEach((item, index) => {

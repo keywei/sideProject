@@ -4,13 +4,14 @@
             <input type="text" placeholder="新增事項" v-model="newToDo" />
             <button @click="addNewToDo">新增</button>
         </div>
-
         <ul>
             <li class="items" v-for="item in items" :key="item.id">
                 <div v-if="item.id !== cacheToDo.id">
                     <div class="todo">{{ item.toDo }}</div>
                     <div class="todos-btn">
-                        <label class="done" for="checkbox">{{ item.finished ? '' : '勾選完成' }}</label>
+                        <label class="done" for="checkbox">{{
+                            item.finished ? '' : '勾選完成'
+                        }}</label>
                         <input type="checkbox" v-model="item.finished" />
                         <button class="btn" @click="edit(item)">修改</button>
                         <button class="btn" @click="remove(item.id)">刪除</button>
@@ -34,7 +35,7 @@
 export default {
     data() {
         return {
-            id: 3,
+            id: 5,
             newToDo: '',
             cacheToDo: {},
         };
@@ -65,7 +66,7 @@ export default {
             this.$store.commit('remove', id);
         },
         edit(item) {
-            this.cacheToDo = item;
+            this.cacheToDo = Object.assign({}, item);
         },
         cancel() {
             this.cacheToDo = {};
