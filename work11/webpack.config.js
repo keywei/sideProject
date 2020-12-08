@@ -1,6 +1,7 @@
 const path = require('path');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+// const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 
 module.exports = {
@@ -12,6 +13,14 @@ module.exports = {
     module: {
       rules: [
         {
+          test: /\.css$/,
+          use: [MiniCssExtractPlugin.loader,'css-loader']
+      },
+        // {
+        //   test: /\.css$/,
+        //   loader: ['style-loader','css-loader']
+        // },
+        {
           test: /\.vue$/,
           loader: 'vue-loader',
         },
@@ -19,6 +28,17 @@ module.exports = {
           test: /\.m?js$/,
           exclude: /(node_modules)/,
           loader: 'babel-loader',
+          options: {
+            presets: [
+                [
+                    '@babel/preset-env',
+                    {
+                        useBuiltIns: 'usage',
+                        corejs: '3.0.0'
+                    },
+                ],
+            ]
+        }
         },
         {
           test: /\.(png|jpe?g|gif)$/i,
@@ -41,6 +61,7 @@ module.exports = {
         template: './src/index.html',
         filename: 'index.html'
       }),
+      new MiniCssExtractPlugin()
     ],
     // optimization: {
     //   runtimeChunk: {
