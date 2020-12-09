@@ -1,13 +1,24 @@
 <template>
-    <todo></todo>
+    <div>
+        <newtodo></newtodo>
+        <todoitems :items="toDoList"></todoitems>
+    </div>
 </template>
 
 <script>
-import todo from '../components/todo.vue';
+import { mapState } from 'vuex';
+import newtodo from '../components/newToDo.vue';
+import todoitems from '../components/toDoItems.vue';
 
 export default {
-    components:{
-        todo
-    }
-}
+    computed: {
+        ...mapState({
+            toDoList: (state) => state.toDoList.filter((item) => item.finished === false),
+        }),
+    },
+    components: {
+        newtodo,
+        todoitems,
+    },
+};
 </script>

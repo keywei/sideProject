@@ -1,9 +1,9 @@
 import Vue from 'vue';
-import 'normalize.css';
-import './CSS/style.css';
 import App from './App.vue';
 import store from './store';
 import router from './router';
+import 'normalize.css';
+import './CSS/style.css';
 
 new Vue({
     store,

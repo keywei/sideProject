@@ -1,13 +1,25 @@
 <template>
-        <todolistall></todolistall>
+    <div>
+        <newtodo></newtodo>
+        <todoitems :items="toDoList" :move="moveBtn"></todoitems>
+    </div>
 </template>
 
 <script>
-import todolistall from '../components/todolistall.vue';
+import { mapState } from 'vuex';
+import newtodo from '../components/newToDo.vue';
+import todoitems from '../components/toDoItems.vue';
 
 export default {
+    data() {
+        return {
+            moveBtn:true
+        }
+    },
+    computed: mapState(['toDoList']),
     components: {
-        todolistall
-    }    
-}
+        newtodo,
+        todoitems,
+    },
+};
 </script>

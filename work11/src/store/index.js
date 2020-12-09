@@ -12,40 +12,46 @@ export default new Vuex.Store({
             { id: 3, toDo: '下班記得要打卡', finished: false },
             { id: 4, toDo: '老虎城有間漢堡店有空可以去吃', finished: false },
         ],
+        newId: 5,
     },
     mutations: {
-        addNewToDo(state, NewToDo) {
-            state.toDoList.push(NewToDo);
+        addNewToDo(state, newToDo) {
+            state.toDoList = newToDo;
         },
-        remove(state, removeToDoId) {
-            state.toDoList.forEach((item, index) => {
-                if (item.id === removeToDoId) {
-                    state.toDoList.splice(index, 1);
-                }
-            });
+        remove(state, removeItem) {
+            state.toDoList = removeItem;
         },
-        moveup(state, toDo) {
-            if (toDo.index !== 0) {
-                state.toDoList.splice(toDo.index - 1, 0, state.toDoList[toDo.index]);
-                state.toDoList.splice(toDo.index + 1, 1);
-            } else {
-                alert('已經在最前項了');
-            }
+        moveup(state, moveUpToDo) {
+            state.toDoList = moveUpToDo;
         },
-        movedown(state, toDo) {
-            if (toDo.index !== state.toDoList.length - 1) {
-                state.toDoList.splice(toDo.index + 2, 0, state.toDoList[toDo.index]);
-                state.toDoList.splice(toDo.index, 1);
-            } else {
-                alert('已經在最後項了');
-            }
+        movedown(state, moveDownToDo) {
+            state.toDoList = moveDownToDo;
         },
-        send(state, cacheToDo) {
-            state.toDoList.forEach((item, index) => {
-                if (item.id === cacheToDo.id) {
-                    state.toDoList[index].toDo = cacheToDo.toDo;
-                }
-            });
+        update(state, cacheToDo) {
+            state.toDoList = cacheToDo;
+        },
+        newidadd(state, newid) {
+            state.newId = newid;
+        },
+    },
+    actions: {
+        vuexaddnewtodo({ commit }, newToDo) {
+            commit('addNewToDo', newToDo);
+        },
+        vuexremove({ commit }, removeItem) {
+            commit('remove', removeItem);
+        },
+        vuexupdate({ commit }, cacheToDo) {
+            commit('update', cacheToDo);
+        },
+        vuexmoveup({ commit }, moveUpToDo) {
+            commit('moveup', moveUpToDo);
+        },
+        vuexmovedown({ commit }, moveDownToDo) {
+            commit('movedown', moveDownToDo);
+        },
+        vuexnewidadd({ commit }, newid) {
+            commit('newidadd', newid);
         },
     },
 });
