@@ -69,35 +69,17 @@ export default {
             this.cancel();
         },
         moveup(i) {
-            if (i !== 0) {
-                let moveupitem = this.toDoList.map((item, index, array) => {
-                    if (index === i - 1) {
-                        return array[i];
-                    } else if (index === i) {
-                        return array[i - 1];
-                    } else {
-                        return item;
-                    }
-                });
-                this.vuexmoveup(moveupitem);
+            if (i === 0) {
+                return alert('已經在最前項了');
             } else {
-                alert('已經在最前項了');
+                this.vuexmoveup(i);
             }
         },
         movedown(i) {
-            if (i !== this.toDoList.length - 1) {
-                let movedownitem = this.toDoList.map((item, index, array) => {
-                    if (index === i + 1) {
-                        return array[i];
-                    } else if (index === i) {
-                        return array[i + 1];
-                    } else {
-                        return item;
-                    }
-                });
-                this.vuexmovedown(movedownitem);
+            if (i === this.toDoList.length - 1) {
+                return alert('已經在最前項了');
             } else {
-                alert('已經在最前項了');
+                this.vuexmovedown(i);
             }
         },
     },

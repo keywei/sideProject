@@ -13,7 +13,7 @@ import todoitems from '../components/toDoItems.vue';
 export default {
     data() {
         return {
-            moveBtn:true
+            moveBtn: true
         }
     },
     computed: mapState(['toDoList']),

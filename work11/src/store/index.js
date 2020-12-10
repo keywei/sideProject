@@ -17,21 +17,35 @@ export default new Vuex.Store({
     mutations: {
         addNewToDo(state, newToDo) {
             state.toDoList = [...state.toDoList, newToDo];
+            state.newId = state.newid + 1;
         },
         remove(state, removeId) {
             state.toDoList = state.toDoList.filter((item) => item.id !== removeId);
         },
-        moveup(state, moveUpToDo) {
-            state.toDoList = moveUpToDo;
+        moveup(state, i) {
+            state.toDoList = state.toDoList.map((item, index) => {
+                if (index === i - 1) {
+                    return state.toDoList[i];
+                }
+                if (index === i) {
+                    return state.toDoList[i - 1];
+                }
+                return item;
+            });
         },
-        movedown(state, moveDownToDo) {
-            state.toDoList = moveDownToDo;
+        movedown(state, i) {
+            state.toDoList = state.toDoList.map((item, index) => {
+                if (index === i + 1) {
+                    return state.toDoList[i];
+                }
+                if (index === i) {
+                    return state.toDoList[i + 1];
+                }
+                return item;
+            });
         },
         update(state, cacheToDo) {
             state.toDoList = cacheToDo;
-        },
-        newidadd(state, newid) {
-            state.newId = newid;
         },
     },
     actions: {
@@ -44,14 +58,11 @@ export default new Vuex.Store({
         vuexupdate({ commit }, cacheToDo) {
             commit('update', cacheToDo);
         },
-        vuexmoveup({ commit }, moveUpToDo) {
-            commit('moveup', moveUpToDo);
+        vuexmoveup({ commit }, i) {
+            commit('moveup', i);
         },
-        vuexmovedown({ commit }, moveDownToDo) {
-            commit('movedown', moveDownToDo);
-        },
-        vuexnewidadd({ commit }, newid) {
-            commit('newidadd', newid);
+        vuexmovedown({ commit }, i) {
+            commit('movedown', i);
         },
     },
 });

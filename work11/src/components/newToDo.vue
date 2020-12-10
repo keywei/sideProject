@@ -18,7 +18,7 @@ export default {
         ...mapState(['newId']),
     },
     methods: {
-        ...mapActions(['vuexaddnewtodo', 'vuexnewidadd']),
+        ...mapActions(['vuexaddnewtodo']),
         addNewToDo() {
             if (this.newToDo === '') {
                 alert('請輸入事項');
@@ -28,8 +28,6 @@ export default {
                     todo: this.newToDo,
                     finished: false,
                 });
-                let id = this.newId + 1;
-                this.vuexnewidadd(id);
                 this.newToDo = '';
             }
         },
