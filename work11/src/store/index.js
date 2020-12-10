@@ -6,20 +6,20 @@ Vue.use(Vuex);
 export default new Vuex.Store({
     state: {
         toDoList: [
-            { id: 0, toDo: '早上要記得吃早餐', finished: true },
-            { id: 1, toDo: '12/25聖誕節，公司有聚會', finished: false },
-            { id: 2, toDo: '明年是2021年，新氣象', finished: true },
-            { id: 3, toDo: '下班記得要打卡', finished: false },
-            { id: 4, toDo: '老虎城有間漢堡店有空可以去吃', finished: false },
+            { id: 0, todo: '早上要記得吃早餐', finished: true },
+            { id: 1, todo: '12/25聖誕節，公司有聚會', finished: false },
+            { id: 2, todo: '明年是2021年，新氣象', finished: true },
+            { id: 3, todo: '下班記得要打卡', finished: false },
+            { id: 4, todo: '老虎城有間漢堡店有空可以去吃', finished: false },
         ],
         newId: 5,
     },
     mutations: {
         addNewToDo(state, newToDo) {
-            state.toDoList = newToDo;
+            state.toDoList = [...state.toDoList, newToDo];
         },
-        remove(state, removeItem) {
-            state.toDoList = removeItem;
+        remove(state, removeId) {
+            state.toDoList = state.toDoList.filter((item) => item.id !== removeId);
         },
         moveup(state, moveUpToDo) {
             state.toDoList = moveUpToDo;
@@ -38,8 +38,8 @@ export default new Vuex.Store({
         vuexaddnewtodo({ commit }, newToDo) {
             commit('addNewToDo', newToDo);
         },
-        vuexremove({ commit }, removeItem) {
-            commit('remove', removeItem);
+        vuexremove({ commit }, removeId) {
+            commit('remove', removeId);
         },
         vuexupdate({ commit }, cacheToDo) {
             commit('update', cacheToDo);

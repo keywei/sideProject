@@ -4,7 +4,7 @@
             <li class="items" v-for="(item, index) in items" :key="item.id">
                 <div v-if="item.id !== cacheToDo.id">
                     <input type="checkbox" v-model="item.finished" />
-                    <div class="todo">{{ item.toDo }}</div>
+                    <div class="todo">{{ item.todo }}</div>
                     <div class="todos-btn">
                         <template v-if="move">
                             <button class="btn" @click="moveup(index)">上移</button>
@@ -16,7 +16,7 @@
                 </div>
                 <div v-if="item.id === cacheToDo.id">
                     <div class="todo">
-                        <input class="edit" type="text" v-model="cacheToDo.toDo" />
+                        <input class="edit" type="text" v-model="cacheToDo.todo" />
                     </div>
                     <div class="todos-btn">
                         <button class="btn" @click="cancel">取消</button>
@@ -49,8 +49,7 @@ export default {
     methods: {
         ...mapActions(['vuexremove', 'vuexupdate', 'vuexmoveup', 'vuexmovedown']),
         remove(id) {
-            let removeItem = this.toDoList.filter((item, index) => item.id !== id);
-            this.vuexremove(removeItem);
+            this.vuexremove(id);
         },
         edit(item) {
             this.cacheToDo = Object.assign({}, item);
@@ -59,7 +58,7 @@ export default {
             this.cacheToDo = {};
         },
         update() {
-            let updateItem = this.toDoList.map((item, index) => {
+            let updateItem = this.toDoList.map((item) => {
                 if (item.id !== this.cacheToDo.id) {
                     return item;
                 } else {
@@ -69,20 +68,34 @@ export default {
             this.vuexupdate(updateItem);
             this.cancel();
         },
-        moveup(index) {
-            if (index !== 0) {
-                let copyToDoList = [...this.toDoList];
-                [copyToDoList[index - 1], copyToDoList[index]] = [copyToDoList[index], copyToDoList[index - 1]];
-                this.vuexmoveup(copyToDoList);
+        moveup(i) {
+            if (i !== 0) {
+                let moveupitem = this.toDoList.map((item, index, array) => {
+                    if (index === i - 1) {
+                        return array[i];
+                    } else if (index === i) {
+                        return array[i - 1];
+                    } else {
+                        return item;
+                    }
+                });
+                this.vuexmoveup(moveupitem);
             } else {
                 alert('已經在最前項了');
             }
         },
-        movedown(index) {
-            let copyToDoList = [...this.toDoList];
-            if (index !== copyToDoList.length - 1) {
-                [copyToDoList[index + 1], copyToDoList[index]] = [copyToDoList[index],copyToDoList[index + 1]];
-                this.vuexmovedown(copyToDoList);
+        movedown(i) {
+            if (i !== this.toDoList.length - 1) {
+                let movedownitem = this.toDoList.map((item, index, array) => {
+                    if (index === i + 1) {
+                        return array[i];
+                    } else if (index === i) {
+                        return array[i + 1];
+                    } else {
+                        return item;
+                    }
+                });
+                this.vuexmovedown(movedownitem);
             } else {
                 alert('已經在最前項了');
             }

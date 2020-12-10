@@ -1,7 +1,7 @@
 <template>
     <div>
         <newtodo></newtodo>
-        <todoitems :items="toDoList"></todoitems>
+        <todoitems :items="toDoListFilter"></todoitems>
     </div>
 </template>
 
@@ -12,9 +12,10 @@ import todoitems from '../components/toDoItems.vue';
 
 export default {
     computed: {
-        ...mapState({
-            toDoList: (state) => state.toDoList.filter((item) => item.finished === false),
-        }),
+        ...mapState(['toDoList']),
+        toDoListFilter() {
+            return this.toDoList.filter((item) => item.finished === false);
+        },
     },
     components: {
         newtodo,

@@ -15,14 +15,7 @@ export default {
         };
     },
     computed: {
-        addtodo() {
-            return {
-                id: this.newId,
-                toDo: this.newToDo,
-                finished: false,
-            };
-        },
-        ...mapState(['toDoList', 'newId']),
+        ...mapState(['newId']),
     },
     methods: {
         ...mapActions(['vuexaddnewtodo', 'vuexnewidadd']),
@@ -30,8 +23,11 @@ export default {
             if (this.newToDo === '') {
                 alert('請輸入事項');
             } else {
-                let addnewtodo = [...this.toDoList, this.addtodo];
-                this.vuexaddnewtodo(addnewtodo);
+                this.vuexaddnewtodo({
+                    id: this.newId,
+                    todo: this.newToDo,
+                    finished: false,
+                });
                 let id = this.newId + 1;
                 this.vuexnewidadd(id);
                 this.newToDo = '';
