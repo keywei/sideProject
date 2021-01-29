@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-router"></script>
+</head>
+
+<body>
+    <div id="app">
+        <input type="checkbox" v-model="toggle" true-value="yes" false-value="no">
+        {{ toggle }}
+    </div>
+    <script>
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                toggle: '123'
+            }
+        })
+    </script>
+</body>
+
+</html>
